@@ -21,11 +21,12 @@
         top: 0;
         right: -100%;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         padding: 4rem 1.5rem;
         color: var(--tamarind);
         background-color: var(--bronco);
-        z-index: 1000;
+        transition: right 0.3s ease-in;
+        z-index: 10;
     }
 
     .nav__menu.toggle{
@@ -48,5 +49,9 @@
 
     .social__links{
         font-size: 1.3rem;
+    }
+
+    @media (min-width: 768px) {
+        
     }
 }
