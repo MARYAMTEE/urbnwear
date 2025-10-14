@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --bronco: hsla(30, 17%, 75%, 0.589);
+    --tamarind: hsl(5, 40%, 12%);
+    --congo-brown: hsl(13, 24%, 29%);
+    --copper: hsl(27, 55%, 42%);
+
+    --antique-brass: hsl(21, 53%, 59%);
+}
+
+@layer components {
+    body{
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1rem;
+    }
+
+    .nav__menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        padding: 4rem 1.5rem;
+        color: var(--tamarind);
+        background-color: var(--bronco);
+        z-index: 1000;
+    }
+
+    .nav__menu.toggle{
+        right: 0;
+    }
+
+    .nav__item {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav__link {
+        color: var(--tamarind);
+        font-weight: 600;
+    }
+
+    .close{
+        font-size: 1.5rem;
+    }
+
+    .social__links{
+        font-size: 1.3rem;
+    }
+}
