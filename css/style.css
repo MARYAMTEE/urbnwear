@@ -33,6 +33,10 @@
         right: 0;
     }
 
+    .nav__list{
+        display: block;
+    }
+
     .nav__item {
         width: 100%;
         padding: 1rem;
@@ -51,7 +55,52 @@
         font-size: 1.3rem;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
+        .nav__menu {
+            position: relative;
+            top: auto;
+            right: auto;
+            padding: 0;
+            background-color: transparent;
+            display: flex;
+            flex-direction: row-reverse;
+            /* justify-content: space-between; */
+        }
+
+        .nav__list {
+            display: inline-flex;
+        }
+
+        .nav__link {
+            font-size: 1rem;
+        }
+
+        .nav__item {
+            padding: 1rem 2rem;
+            position: relative;
+            z-index: 1;
+            margin-left: 2rem;
+        }
+        
+
+        .nav__item::before,
+        .nav__item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 2px solid red;
+            transform: skew(40deg);
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        /* .nav__item::before {
+            transform: rotate(-15deg);
+        } */
+
         
     }
 }
+
+/* npx @tailwindcss/cli -i ./css/style.css -o ./css/output.css --watch
+ */

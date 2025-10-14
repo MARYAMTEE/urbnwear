@@ -13,7 +13,7 @@
     <script src="./js/script.js" defer></script>
 </head>
 <body>
-    <header class="relative">
+    <header class="relative md:flex md:justify-between md:items-center md:bg-[var(--bronco)] md:px-4">
         <div class="logo__container flex justify-between">
             <h1 class="logo text-3xl font-semibold">URBNWEAR</h1>
 
@@ -24,13 +24,13 @@
 
         <nav aria-label="Primary" class="nav__menu">
             <div class="nav__header flex justify-between items-center">
-                <button type="button" class="close__menu" aria-label="close menu">
+                <button type="button" class="close__menu md:hidden" aria-label="close menu">
                     <i class="fa-solid fa-xmark close" aria-hidden="true"></i>
                 </button>
     
-                <h1 class="logo text-3xl font-semibold">URBNWEAR</h1>
+                <h1 class="logo text-3xl font-semibold md:hidden">URBNWEAR</h1>
     
-                <div class="shopping__icon flex gap-4">
+                <div class="shopping__icon flex gap-4 md:gap-2">
                     <button type="button" class="wish__list" aria-label="Wish List">
                         <i class="fa-regular fa-heart wish" aria-hidden="true"></i>
                     </button>
@@ -49,7 +49,7 @@
                 <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
             </ul>
 
-            <div class="auth__container text-center flex flex-col gap-10">
+            <div class="auth__container text-center flex flex-col gap-10 md:hidden">
                 <ul  class="login-details flex flex-col gap-6">
                     <li class=""><a href="#" class="log__in">Log in</a></li>
                     <li class=""><a href="#">Create account</a></li>
