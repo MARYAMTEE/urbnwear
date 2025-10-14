@@ -12,5 +12,13 @@
   "type": "commonjs",
   "devDependencies": {
     "tailwindcss": "^4.1.14"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MARYAMTEE/urbnwear.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MARYAMTEE/urbnwear/issues"
+  },
+  "homepage": "https://github.com/MARYAMTEE/urbnwear#readme"
 }
