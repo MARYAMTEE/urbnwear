@@ -72,6 +72,10 @@
         font-size: 1.3rem;
     }
 
+    .banner__title{
+        font-family: "Cormorant Garamond", serif;
+    }
+
     @media (min-width: 48rem) {
         .nav__menu {
             position: relative;
@@ -96,6 +100,15 @@
             position: relative;
             cursor: pointer;
             z-index: 1;
+        }
+
+        .clothing__banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: hsla(5,41%,12%,0.3);
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
         }
     }
 
