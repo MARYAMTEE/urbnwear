@@ -2,11 +2,11 @@
 
 :root{
     --bronco: hsla(30, 17%, 75%, 0.589);
-    --tamarind: hsl(5, 40%, 12%);
-    --congo-brown: hsl(13, 24%, 29%);
-    --copper: hsl(27, 55%, 42%);
+    --tamarind: #2b1412;
+    --congo-brown: #5c4038;
+    --copper: #a66530;
 
-    --antique-brass: hsl(21, 53%, 59%);
+    --antique-brass: #ce865f;
 }
 
 @layer components {
@@ -17,6 +17,7 @@
 
     .logo {
         font-family: "Cormorant Garamond", serif;
+        letter-spacing: 0.05em;
     }
 
     .logo.active {
@@ -33,7 +34,7 @@
         color: var(--tamarind);
         background-color: var(--bronco);
         transition: right 0.3s ease-in;
-        z-index: 10;
+        z-index: 1000;
     }
 
     .nav__menu.toggle{
@@ -58,7 +59,8 @@
         font-weight: 600;
     }
 
-    .nav__link.active{
+    .nav__link.active,
+    .nav__link:hover{
         color: var(--copper);
     }
 
