@@ -25,6 +25,8 @@ navList.forEach((list, index) => {
         navLink.forEach(link => link.classList.remove("active"));
         navLink[index].classList.add("active");
 
+        logoText.classList.remove("hidden");
+
         navMenu.classList.remove("toggle");
     });
 })
