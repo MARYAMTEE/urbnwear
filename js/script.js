@@ -3,7 +3,7 @@ const closeMenu = document.querySelector(".close__menu");
 const navMenu = document.querySelector(".nav__menu");
 const navList = document.querySelectorAll(".nav__item");
 const navLink = document.querySelectorAll(".nav__link");
-const logoText = document.querySelector(".logo");
+const logoText = document.querySelector(".logo__container");
 
 openMenu.addEventListener("click", () => {
     navMenu.classList.toggle("toggle");

@@ -17,11 +17,11 @@
     <script src="./js/script.js" defer></script>
 </head>
 <body>
-    <header class="relative px-4 py-8 md:flex md:justify-between md:items-center md:bg-[var(--bronco)] md:py-0">
-        <div class="logo__container flex justify-between">
+    <header class="relative py-8 bg-[var(--bronco)] md:py-0">
+        <div class="logo__container flex justify-between items-center px-4 md:hidden">
             <h1 class="logo text-3xl font-semibold">URBNWEAR</h1>
 
-            <button type="button" class="open__menu inline-block text-2xl md:hidden" aria-label="open menu">
+            <button type="button" class="open__menu inline-block text-2xl" aria-label="open menu">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
         </div>
@@ -32,9 +32,9 @@
                     <i class="fa-solid fa-xmark close" aria-hidden="true"></i>
                 </button>
     
-                <h1 class="logo logo--mobile text-3xl font-semibold md:hidden">URBNWEAR</h1>
+                <h1 class="logo logo--mobile text-3xl font-semibold md:pt-8">URBNWEAR</h1>
     
-                <div class="shopping__icon flex gap-4 md:gap-2">
+                <div class="shopping__icon flex gap-4 md:gap-2 md:absolute md:right-4 md:pt-8">
                     <button type="button" class="wish__list" aria-label="Wish List">
                         <i class="fa-regular fa-heart wish" aria-hidden="true"></i>
                     </button>
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <ul class="nav__list text-center font-medium py-8 uppercase">
+            <ul class="nav__list text-center font-medium py-8 uppercase md:pt-12 md:pb-4 md:mr-16">
                 <li class="nav__item active"><a href="#" class="nav__link active">Home</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">About</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
@@ -53,26 +53,26 @@
                 <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
             </ul>
 
-            <div class="auth__container text-center flex flex-col gap-10 md:hidden">
-                <ul  class="login__details flex flex-col gap-6">
-                    <li class=""><a href="#" class="log__in">Log in</a></li>
-                    <li class=""><a href="#">Create account</a></li>
+            <div class="auth__container text-center flex flex-col items-center gap-10 md:bg-[var(--transparent-tamarind)] md:absolute md:top-0 md:left-0 md:right-0 md:flex-row-reverse md:w-full md:justify-flex-end md:text-sm md:px-4 md:py-2">
+                <ul  class="login__details flex flex-col gap-6 md:flex-row md:gap-2">
+                    <li class="login__item"><a href="#" class="log__in">Log in</a></li>
+                    <li class="login__item"><a href="#">Create account</a></li>
                 </ul>
     
                 <div class="socials">
                     <ul class="social__icons flex items-center justify-center gap-4">
-                        <li class="social__list">
-                            <a href="#" class="social__links">
+                        <li class="social__list transform transition duration-300 hover:-translate-y-1">
+                            <a href="#" class="social__links text-[1.3rem] md:text-[1rem]">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         </li>
-                        <li class="social__list">
-                            <a href="#" class="social__links">
+                        <li class="social__list transform transition duration-300 hover:-translate-y-1">
+                            <a href="#" class="social__links text-[1.3rem] md:text-[1rem]">
                                 <i class="fa-brands fa-pinterest"></i>
                             </a>
                         </li>
-                        <li class="social__list">
-                            <a href="#" class="social__links">
+                        <li class="social__list transform transition duration-300 hover:-translate-y-1">
+                            <a href="#" class="social__links text-[1.3rem] md:text-[1rem]">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
@@ -83,11 +83,11 @@
     </header>
 
     <main class="">
-        <section class="clothing__banner flex flex-col items-center justify-center text-center md:flex-row min-h-screen text-white bg-[url('../images/mobile-background.jpg')] bg-cover bg-center bg-no-repeat text-white relative md:bg-[url('../images/background-img.jpg')]">
-            <div class="block absolute top-0 left-0 w-1/2 h-full bg-[url('../images/layered-peak.svg')] bg-cover bg-center bg-no-repeat z-0"></div>
+        <section class="clothing__banner flex flex-col items-center justify-center text-center min-h-[25rem] lg:min-h-screen text-white bg-[url('../images/mobile-background.jpg')] bg-cover bg-center bg-no-repeat text-white relative sm:bg-[url('../images/new-bg.jpg')]">
+            <div class="absolute top-0 left-0 w-1/2 h-full bg-[url('../images/layered-peak.svg')] bg-cover bg-center bg-no-repeat z-10 md:left-auto md:right-0 md:transform md:rotate-180"></div>
 
-            <div class="banner__right w-full flex flex-col px-4 md:items-end md:text-right md:p-16 z-10">
-                <h1 class="banner__title text-3xl font-semibold mb-4 leading-10 uppercase md:text-4xl md:leading-12">Redefine Your Style with Confidence</h1>
+            <div class="banner__right w-full flex flex-col px-4 max-w-[400px] md:items-start md:text-left md:p-16 md:max-w-full z-50">
+                <h1 class="banner__title text-3xl font-semibold mb-4 leading-10 uppercase md:text-4xl md:leading-12 md:max-w-[500px]">Redefine Your Style with Confidence</h1>
                 <p class="banner__text mb-6">Create amazing experiences with clean and modern design</p>
                 <button type="button" class="banner__btn border-1 bg-[var(--bronco)] text-white rounded-lg py-4 px-6 uppercase tracking-widest shadow-[0_4px_10px_0_var(--copper)] transform transition duration-300 hover:-translate-y-2">Explore Collection</button>
             </div>
