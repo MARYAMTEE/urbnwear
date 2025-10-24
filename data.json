@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Pure Comfort",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/bralet-2.jpg",
+        "type": ["featured", "best seller"]
+    },
+    {
+        "id": 2,
+        "name": "Glow Ribbed",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/harmless-croptop-1.png",
+        "type":["featured", "best seller"]
+    },
+    {
+        "id": 3,
+        "name": "Aura Crop",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/croptop-1.png",
+        "type": ["featured", "new arrival"]
+    },
+    {
+        "id": 4,
+        "name": "Luxe Wrap",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/long-pindown-3.png",
+        "type": ["featured", "new arrival"]
+    },
+    {
+        "id": 5,
+        "name": "Cloud Top",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/croppedtop-3.jpg",
+        "type": ["featured", "best seller"]
+    },
+    {
+        "id": 6,
+        "name": "Sway Tank",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/bralet-3.png",
+        "type": ["featured", "best seller"]
+    },
+    {
+        "id": 7,
+        "name": "Bold Tee",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/long-pindown-2.png",
+        "type": ["featured", "new arrival"]
+    },
+    {
+        "id": 8,
+        "name": "Ella Knit",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/pindown-4.jpg",
+        "type": ["featured", "new arrival"]
+    },
+    {
+        "id": 9,
+        "name": "Ella Knit",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/sweatshirt.png",
+        "type": ["featured", "best seller"]
+    },
+    {
+        "id": 10,
+        "name": "Bold Tee",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/long-pindown-2.png",
+        "type": ["featured", "best seller"]
+    },
+    {
+        "id": 11,
+        "name": "Muse Shirt",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/sweatshirt-2.png",
+        "type": ["featured", "new arrival"]
+    },
+    {
+        "id": 13,
+        "name": "Grace Top",
+        "category": "Women",
+        "price": 45,
+        "image":"./images/long-pindown-1.png",
+        "type": ["featured", "best seller"]
+    }
+]

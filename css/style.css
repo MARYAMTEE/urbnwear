@@ -8,6 +8,7 @@
     --transparent-tamarind: hsla(5, 41%, 12%, 0.075);
 
     --antique-brass: hsl(21, 53%, 59%);
+    --light-antique: hsla(21, 53%, 59%, 0.089);
 }
 
 @layer components {
@@ -86,12 +87,56 @@
         z-index: 50;
     }
 
+    /* category section */
+    /* .category__img{
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+    } */
+
+    .product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+    .product img {
+        width: 100%;
+        height: 7rem;
+        object-fit: cover;
+        background-color: white;
+    }
+
+    .product__text {
+        font-size: 0.75rem;
+        background-color: var(--light-antique);
+        padding-top: 0.5rem;
+    }
+
+    .product__title {
+        text-transform: uppercase;
+    }
+
+    .product__price {
+       font-weight: bold;
+    }
+
+    .product__btn {
+        padding: 0.5rem 1rem;
+        background-color: var(--bronco);
+        font-size: 0.75rem;
+        cursor: pointer;
+    }
+
     @media (min-width: 40rem) {
         .clothing__banner::after {
             content: "";
             position: absolute;
             inset: 0;
-            background-color: hsla(5,41%,12%,0.3);
+            background-color: hsla(5, 41%, 12%, 0.466);
             z-index: 1;
         }
     }
