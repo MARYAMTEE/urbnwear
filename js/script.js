@@ -55,13 +55,15 @@ fetch("data.json")
                 <div class="product__text">
                     <h4 class="product__title">${product.name}</h4>
                     <p class="product__price">$${product.price}</p>
-                    <button type="button" class="product__btn">Add to cart</button>
+                    <button type="button" data-id="${product.id}" class="product__btn">Add to cart</button>
                 </div>
             </div>
             `).join("");
+
+        setupProductDetails();
     }
 
-    // button tab
+    // Feature tab buttons
     tabButtons.forEach(btn => {
         btn.addEventListener("click", () => {
             tabButtons.forEach(b => b.classList.remove("active"));
@@ -73,5 +75,36 @@ fetch("data.json")
     });
 
     // Add to cart
-    const cartBtn = document.querySelectorAll(".product__btn")
+    function setupProductDetails() {
+        const cartBtns = document.querySelectorAll(".product__btn");
+        const detailOverlay = document.querySelector(".clothing__overlay");
+        const detailImg = document.querySelector(".detail__img");
+        const detailTitle = document.querySelector(".detail__name");
+        const detailPrice = document.querySelector(".detail__price");
+        const detailBtn = document.querySelector(".detail_close-btn");
 
+        cartBtns.forEach(btn => {
+            btn.addEventListener("click", e => {
+                const id = parseInt(e.target.dataset.id);
+                const product = productsData.find(p => p.id === id);
+
+                detailImg.src = product.image;
+                detailTitle.textContent = product.name;
+                detailPrice.textContent = `$${product.price}`;
+
+                // show overlay
+                detailOverlay.classList.add("active");
+            });
+        });
+        
+        // close modal
+        detailBtn.addEventListener("click", () => {
+            detailOverlay.classList.remove("active");
+        })
+    
+        detailOverlay.addEventListener("click", e => {
+        if (e.target === detailOverlay) detailOverlay.classList.remove("active");
+      });
+    }
+
+    

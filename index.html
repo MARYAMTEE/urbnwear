@@ -140,14 +140,46 @@
         <section class="clothing__shop">
             <div class="shop__products px-4">
                 <!-- Tabs -->
-                <div class="tabs flex items-center justify-between mt-16 mb-8 relative left-[-1rem] w-[calc(100%+2rem)] sm:my-16 bg-[var(--light-antique)] md:justify-center md:gap-10">
+                <div class="tabs flex items-center justify-between mt-16 mb-8 px-2 relative left-[-1rem] w-[calc(100%+2rem)] sm:my-16 bg-[var(--light-antique)] md:justify-center md:gap-10">
                     <button type="button" class="tab__btn active py-4" data-type="featured">Featured</button>
                     <button type="button" class="tab__btn py-4" data-type="new arrival">New Arrivals</button>
                     <button type="button" class="tab__btn py-4" data-type="best seller">Best Sellers</button>
                 </div>
 
                 <!-- Tab Contents -->
-                <div class="clothing__items grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-2 sm:gap-4 w-full max-w-[48rem] m-auto"></div>
+                <div class="clothing__items grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-y-8 gap-x-2 sm:gap-4 w-full max-w-[48rem] m-auto"></div>
+            </div>
+
+            <!-- Product detail container -->
+            <div class="clothing__overlay">
+                <div class="product__detail">
+                    <button type="button" class="detail_close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <img src="" alt="Product Image" class="detail__img">
+                    <div class="detail__info">
+                        <h4 class="detail__name"></h4>
+                        <p class="detail__description"></p>
+                        <p class="detail__price"></p>
+                    </div>
+
+                    <div class="carts__controls">
+                        <div class="quantity">
+                            <button type="button" class="minus-btn" aria-label="Decrease quantity">
+                                <i class="fa-solid fa-minus" aria-hidden="true"></i>
+                            </button>
+
+                            <span class="display__quantity">0</span>
+
+                            <button type="button" class="plus-btn" aria-label="Increase quantity">
+                                <i class="fa-solid fa-plus"  aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <button type="button" class="buy__btn">Add to Cart</button>
+                        <button type="button" class="buy__btn">Proceed to Checkout</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

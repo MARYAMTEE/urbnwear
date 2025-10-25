@@ -110,13 +110,14 @@
     }
 
     .product img {
-        width: 100%;
+        width: 3rem;
         height: 7rem;
         object-fit: cover;
         background-color: white;
     }
 
     .product__text {
+        width: 100%;
         font-size: 0.75rem;
         background-color: var(--light-antique);
         padding-top: 0.5rem;
