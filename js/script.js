@@ -72,3 +72,6 @@ fetch("data.json")
         });
     });
 
+    // Add to cart
+    const cartBtn = document.querySelectorAll(".product__btn")
+

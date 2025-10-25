@@ -84,7 +84,7 @@
 
     <div class="overlay"></div>
 
-    <main class="">
+    <main class="clothing__main">
         <!-- Banner section -->
         <section class="clothing__banner flex flex-col items-center justify-center text-center min-h-[25rem] lg:min-h-[45rem] text-white bg-[url('../images/mobile-background.jpg')] bg-cover bg-center bg-no-repeat text-white relative sm:bg-[url('../images/new-bg.jpg')]">
             <div class="absolute top-0 left-0 w-1/2 h-full bg-[url('../images/layered-peak.svg')] bg-cover bg-center bg-no-repeat z-10 md:left-auto md:right-0 md:transform md:rotate-180"></div>
@@ -134,38 +134,22 @@
                     <p class="feature__p text-xs">Enjoy discounts and special deals</p>
                 </div>
             </div>
-    </section>
-
-    <!-- Category grid section -->
-    <!-- <section class="grid__section">
-        <div class="section__one">
-            <img src="./images/grid__one.png" class="category__img" alt="">
-        </div>
-        <div class="section__two">
-            <img src="./images/grid_two.jpg" class="category__img" alt="">
-        </div>
-    </section> -->
+        </section>
 
     <!-- Tab section -->
-     <section class="clothing__shop">
-        <div class="shop__title text-center">
-            <h3 class="shop__header">Category</h3>
-            <p class="shop__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
+        <section class="clothing__shop">
+            <div class="shop__products px-4">
+                <!-- Tabs -->
+                <div class="tabs flex items-center justify-between mt-16 mb-8 relative left-[-1rem] w-[calc(100%+2rem)] sm:my-16 bg-[var(--light-antique)] md:justify-center md:gap-10">
+                    <button type="button" class="tab__btn active py-4" data-type="featured">Featured</button>
+                    <button type="button" class="tab__btn py-4" data-type="new arrival">New Arrivals</button>
+                    <button type="button" class="tab__btn py-4" data-type="best seller">Best Sellers</button>
+                </div>
 
-        <div class="shop__products px-4">
-            <!-- Tabs -->
-            <div class="tabs flex items-center justify-center gap-10">
-                <button type="button" class="tab__btn active" data-type="featured">Featured</button>
-                <button type="button" class="tab__btn" data-type="new arrival">New Arrivals</button>
-                <button type="button" class="tab__btn" data-type="best seller">Best Sellers</button>
+                <!-- Tab Contents -->
+                <div class="clothing__items grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-2 sm:gap-4 w-full max-w-[48rem] m-auto"></div>
             </div>
-
-            <!-- Tab Contents -->
-            <div class="clothing__items grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-2 md:gap-4 w-full max-w-[48rem] m-auto"></div>
-        </div>
-
-     </section>
+        </section>
     </main>
 </body>
 </html>
