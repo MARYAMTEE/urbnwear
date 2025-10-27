@@ -38,10 +38,13 @@
                     <button type="button" class="wish__list" aria-label="Wish List">
                         <i class="fa-regular fa-heart wish" aria-hidden="true"></i>
                     </button>
-    
-                    <button type="button" class="shopping" aria-label="Shopping Icon">
-                        <i class="fa-solid fa-cart-shopping shopping" aria-hidden="true"></i>
-                    </button>
+                    
+                    <div class="cart__icon-container">
+                        <button type="button" class="shopping" aria-label="Shopping Icon">
+                            <i class="fa-solid fa-cart-shopping shopping" aria-hidden="true"></i>
+                        </button>
+                        <span id="product__count" class="item-count">0</span>
+                    </div>
                 </div>
             </div>
 
@@ -140,7 +143,7 @@
         <section class="clothing__shop">
             <div class="shop__products px-4">
                 <!-- Tabs -->
-                <div class="tabs flex items-center justify-between mt-16 mb-8 px-2 relative left-[-1rem] w-[calc(100%+2rem)] sm:my-16 bg-[var(--light-antique)] md:justify-center md:gap-10">
+                <div class="tabs flex items-center justify-between mt-16 mb-8 px-2 sm:my-16 bg-[var(--light-antique)] md:justify-center md:gap-10">
                     <button type="button" class="tab__btn active py-4" data-type="featured">Featured</button>
                     <button type="button" class="tab__btn py-4" data-type="new arrival">New Arrivals</button>
                     <button type="button" class="tab__btn py-4" data-type="best seller">Best Sellers</button>
@@ -165,18 +168,18 @@
                     </div>
 
                     <div class="carts__controls">
-                        <div class="quantity">
-                            <button type="button" class="minus-btn" aria-label="Decrease quantity">
+                        <div class="quantity__boxes" data-id="1">
+                            <button type="button" class="minus__btn" aria-label="Decrease quantity">
                                 <i class="fa-solid fa-minus" aria-hidden="true"></i>
                             </button>
 
                             <span class="display__quantity">0</span>
 
-                            <button type="button" class="plus-btn" aria-label="Increase quantity">
+                            <button type="button" class="plus__btn" aria-label="Increase quantity">
                                 <i class="fa-solid fa-plus"  aria-hidden="true"></i>
                             </button>
                         </div>
-                        <button type="button" class="buy__btn">Add to Cart</button>
+                        <button type="button" class="cart__btn">Add to Cart</button>
                         <button type="button" class="buy__btn">Proceed to Checkout</button>
                     </div>
                 </div>

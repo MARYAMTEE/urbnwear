@@ -45,6 +45,7 @@ fetch("data.json")
     .then(data => {
         productsData = data;
         displayProducts("featured");
+        setupQuantityButtons();
     });
 
     function displayProducts(type) {
@@ -82,15 +83,19 @@ fetch("data.json")
         const detailTitle = document.querySelector(".detail__name");
         const detailPrice = document.querySelector(".detail__price");
         const detailBtn = document.querySelector(".detail_close-btn");
+        const quantityBox = document.querySelector(".quantity__boxes");
 
         cartBtns.forEach(btn => {
             btn.addEventListener("click", e => {
-                const id = parseInt(e.target.dataset.id);
-                const product = productsData.find(p => p.id === id);
+                const productId = Number(btn.dataset.id);
+                const product = productsData.find(p => p.id === productId);
 
                 detailImg.src = product.image;
                 detailTitle.textContent = product.name;
+                // detailDesc.textContent = product.description;
                 detailPrice.textContent = `$${product.price}`;
+
+                quantityBox.dataset.id = product.id;
 
                 // show overlay
                 detailOverlay.classList.add("active");
@@ -106,5 +111,40 @@ fetch("data.json")
         if (e.target === detailOverlay) detailOverlay.classList.remove("active");
       });
     }
+
+    function setupQuantityButtons() {
+        // const plusBtns = document.querySelectorAll(".plus__btn");
+        // const minusBtns = document.querySelectorAll(".minus__btn");
+        const buttons = document.querySelectorAll(".plus__btn, .minus__btn");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const quantityBox = btn.closest(".quantity__boxes");
+                const productId = Number(quantityBox.dataset.id);
+                const product = productsData.find(p => p.id === productId);
+                const displayQnty = quantityBox.querySelector(".display__quantity");
+                const detailPrice = document.querySelector(".detail__price");
+                
+
+                let quantity = Number(displayQnty.textContent);
+
+                if (btn.classList.contains("plus__btn")) {
+                    quantity++;
+                } else if (btn.classList.contains("minus__btn") && quantity > 0) {
+                    quantity--;
+                }
+
+                displayQnty.textContent = quantity;
+
+                const totalPrice = product.price * quantity;
+                detailPrice.textContent = `$${totalPrice.toFixed(2)}`;
+            })
+        })
+    }
+
+    // const displayQnty = document.querySelector(".display__quantity");
+    // const cartBtn = document.querySelector(".cart__btn");
+    // const emptyMsg = document.querySelector(".empty-message");
+    // const deleteBtn = document.querySelector(".delete__icon")
 
     
