@@ -11,6 +11,7 @@
     --color-emerald-500: oklch(69.6% 0.17 162.48);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-pink-500: oklch(65.6% 0.241 354.308);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
@@ -271,8 +272,15 @@
   .max-w-\[48rem\] {
     max-width: 48rem;
   }
+  .translate-x-full {
+    --tw-translate-x: 100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-not-allowed {
+    cursor: not-allowed;
   }
   .grid-cols-\[repeat\(auto-fit\,minmax\(10rem\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
@@ -414,6 +422,9 @@
   }
   .uppercase {
     text-transform: uppercase;
+  }
+  .opacity-50 {
+    opacity: 50%;
   }
   .shadow-\[0_4px_6px_0_var\(--transparent-tamarind\)\] {
     --tw-shadow: 0 4px 6px 0 var(--tw-shadow-color, var(--transparent-tamarind));
@@ -775,6 +786,38 @@
     height: 2px;
     background-color: var(--tamarind);
   }
+  .clothing__shop {
+    position: relative;
+  }
+  .clothing__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .product__detail {
+    width: 90%;
+    max-width: 25rem;
+    position: absolute;
+    top: 0;
+    animation: popUp 0.3s ease;
+  }
+  @keyframes popUp {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
   @media (min-width: 40rem) {
     .clothing__banner::after {
       content: "";
@@ -832,6 +875,21 @@
       margin-left: 1.5rem;
     }
   }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -939,24 +997,12 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
@@ -981,9 +1027,6 @@
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-duration: initial;
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
     }
   }
 }

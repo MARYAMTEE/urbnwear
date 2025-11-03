@@ -45,106 +45,99 @@ fetch("data.json")
     .then(data => {
         productsData = data;
         displayProducts("featured");
-        setupQuantityButtons();
     });
 
-    function displayProducts(type) {
-        const filtered = productsData.filter(p => p.type.includes(type));
-        productsContainer.innerHTML = filtered.map(product => `
-            <div class="product">
-                <img src="${product.image}" alt="${product.name}">
-                <div class="product__text">
-                    <h4 class="product__title">${product.name}</h4>
-                    <p class="product__price">$${product.price}</p>
-                    <button type="button" data-id="${product.id}" class="product__btn">Add to cart</button>
-                </div>
+function displayProducts(type) {
+    const filtered = productsData.filter(p => p.type.includes(type));
+    productsContainer.innerHTML = filtered.map(product => `
+        <div class="product">
+            <img src="${product.image}" alt="${product.name}">
+            <div class="product__text">
+                <h4 class="product__title">${product.name}</h4>
+                <p class="product__price">$${product.price}</p>
+                <button type="button" onclick="openProductPage('${product.id}')" class="product__btn">View Details</button>
             </div>
-            `).join("");
+        </div>
+        `).join("");
+    setupProductDetails();
+}
 
-        setupProductDetails();
+// Save scroll before opening a product page
+function openProductPage(productId) {
+    sessionStorage.setItem("scrollPosition", window.scrollY);
+    const productUrl = `product.html?id=${productId}`;
+    window.open(productUrl, "_blank");
+};
+
+// Restore scroll position when user returns
+window.addEventListener("load", () => {
+    const scrollPosition = sessionStorage.getItem("scrollPosition");
+    if(scrollPosition) {
+        window.scrollTo(0, scrollPosition);
+        sessionStorage.removeItem("scrollPosition");
     }
-
-    // Feature tab buttons
-    tabButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            tabButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-
-            const type = btn.dataset.type;
-            displayProducts(type);
-        });
-    });
-
-    // Add to cart
-    function setupProductDetails() {
-        const cartBtns = document.querySelectorAll(".product__btn");
-        const detailOverlay = document.querySelector(".clothing__overlay");
-        const detailImg = document.querySelector(".detail__img");
-        const detailTitle = document.querySelector(".detail__name");
-        const detailPrice = document.querySelector(".detail__price");
-        const detailBtn = document.querySelector(".detail_close-btn");
-        const quantityBox = document.querySelector(".quantity__boxes");
-
-        cartBtns.forEach(btn => {
-            btn.addEventListener("click", e => {
-                const productId = Number(btn.dataset.id);
-                const product = productsData.find(p => p.id === productId);
-
-                detailImg.src = product.image;
-                detailTitle.textContent = product.name;
-                // detailDesc.textContent = product.description;
-                detailPrice.textContent = `$${product.price}`;
-
-                quantityBox.dataset.id = product.id;
-
-                // show overlay
-                detailOverlay.classList.add("active");
-            });
-        });
-        
-        // close modal
-        detailBtn.addEventListener("click", () => {
-            detailOverlay.classList.remove("active");
-        })
+});
     
-        detailOverlay.addEventListener("click", e => {
-        if (e.target === detailOverlay) detailOverlay.classList.remove("active");
-      });
-    }
+    // Feature tab buttons
+tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        tabButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const type = btn.dataset.type;
+        displayProducts(type);
+    });
+});
 
-    function setupQuantityButtons() {
-        // const plusBtns = document.querySelectorAll(".plus__btn");
-        // const minusBtns = document.querySelectorAll(".minus__btn");
-        const buttons = document.querySelectorAll(".plus__btn, .minus__btn");
+// Cart container 
+function createCartContainer() {
+    const cartContainer = document.createElement("div");
+    cartContainer.className = "cart__container";
 
-        buttons.forEach(btn => {
-            btn.addEventListener("click", () => {
-                const quantityBox = btn.closest(".quantity__boxes");
-                const productId = Number(quantityBox.dataset.id);
-                const product = productsData.find(p => p.id === productId);
-                const displayQnty = quantityBox.querySelector(".display__quantity");
-                const detailPrice = document.querySelector(".detail__price");
-                
+    cartContainer.innerHTML = `
+        <div class="cart__header">
+            <h2>Your Cart</h2>
+            <button type="button" class="close__cart aria-label="close cart">
+                <i class="fa-solid fa-xmark close" aria-hidden="true"></i>
+            </button>
+        </div>
 
-                let quantity = Number(displayQnty.textContent);
+         <div class="cart__items></div>
 
-                if (btn.classList.contains("plus__btn")) {
-                    quantity++;
-                } else if (btn.classList.contains("minus__btn") && quantity > 0) {
-                    quantity--;
-                }
+         <div class="class__footer">
+            <button class="checkout__btn">Proceed to Checkout</button>
+         </div>
+    `;
 
-                displayQnty.textContent = quantity;
+    document.body.appendChild(cartContainer)
+}
+createCartContainer();
 
-                const totalPrice = product.price * quantity;
-                detailPrice.textContent = `$${totalPrice.toFixed(2)}`;
-            })
-        })
-    }
+// Toggle cart when cart icon is clicked
+const cartIcon = document.querySelector(".shopping");
+const cartContainer = document.querySelector(".cart__container");
 
-    // const displayQnty = document.querySelector(".display__quantity");
-    // const cartBtn = document.querySelector(".cart__btn");
-    // const emptyMsg = document.querySelector(".empty-message");
-    // const deleteBtn = document.querySelector(".delete__icon")
+cartIcon.addEventListener("click", () => {
+    cartContainer.classList.toggle("hidden");
+    cartContainer.classList.toggle("translate-x-full");
+});
+
+// Close cart
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("close__cart")) {
+    cartContainer.classList.add("hidden");
+    cartContainer.classList.add("translate-x-full");
+  }
+});
+
+
+// Cart selection
+function updateCart() {
+    const quantityBox = btn.closest(".quantity__boxes");
+    const productId = Number(quantityBox.dataset.id);
+    const product = productsData.find(p => p.id === productId);
+    const displayQnty = quantityBox.querySelector(".display__quantity");
+    const detailPrice = document.querySelector(".detail__price");
+    const cartBtn = document.querySelector(".cart__btn");
+}
 
     
