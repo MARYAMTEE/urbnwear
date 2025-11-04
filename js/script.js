@@ -59,7 +59,7 @@ function displayProducts(type) {
             </div>
         </div>
         `).join("");
-    setupProductDetails();
+    // setupProductDetails();
 }
 
 // Save scroll before opening a product page
@@ -88,30 +88,6 @@ tabButtons.forEach(btn => {
     });
 });
 
-// Cart container 
-function createCartContainer() {
-    const cartContainer = document.createElement("div");
-    cartContainer.className = "cart__container";
-
-    cartContainer.innerHTML = `
-        <div class="cart__header">
-            <h2>Your Cart</h2>
-            <button type="button" class="close__cart aria-label="close cart">
-                <i class="fa-solid fa-xmark close" aria-hidden="true"></i>
-            </button>
-        </div>
-
-         <div class="cart__items></div>
-
-         <div class="class__footer">
-            <button class="checkout__btn">Proceed to Checkout</button>
-         </div>
-    `;
-
-    document.body.appendChild(cartContainer)
-}
-createCartContainer();
-
 // Toggle cart when cart icon is clicked
 const cartIcon = document.querySelector(".shopping");
 const cartContainer = document.querySelector(".cart__container");
@@ -130,14 +106,82 @@ document.addEventListener("click", (e) => {
 });
 
 
-// Cart selection
-function updateCart() {
-    const quantityBox = btn.closest(".quantity__boxes");
-    const productId = Number(quantityBox.dataset.id);
-    const product = productsData.find(p => p.id === productId);
-    const displayQnty = quantityBox.querySelector(".display__quantity");
-    const detailPrice = document.querySelector(".detail__price");
-    const cartBtn = document.querySelector(".cart__btn");
+// Load Cart items 
+function loadCartItems() {
+    const cartItemsContainer = document.querySelector(".cart__items");
+    const totalDisplay = document.querySelector(".cart__total");
+    const emptyMsg = document.querySelector(".empty__message");
+    const checkoutBtn = document.querySelector(".checkout__btn");
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+
+    cartItemsContainer.innerHTML = "";
+
+    if(cart.length === 0) {
+        emptyMsg.classList.remove("hidden");
+        totalDisplay.textContent = "";
+        return;
+    } else {
+        emptyMsg.classList.add("hidden");
+        checkoutBtn.classList.remove("hidden");
+    }
+    
+    cart.forEach((item, index) => {
+        const itemEl = document.createElement("div");
+        itemEl.className = "cart__item";
+
+        itemEl.innerHTML = `
+            <div>
+                <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-cover rounded">
+                <div>
+                    <p>${item.name}</p>
+                    <p>$${item.price} x ${item.quantity}</p>
+                    <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                </div>
+            </div>
+            <button type="button" class="delete__btn">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        `;
+
+        // Delete event
+        const deleBtn = itemEl.querySelector(".delete__btn");
+        deleBtn.addEventListener("click", () => {
+            // remove item from cart
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            loadCartItems();
+
+            showSuccessMsg(`${item.name} was removed from your cart.`);
+        });
+
+        total += item.price * item.quantity;
+        cartItemsContainer.appendChild(itemEl);
+    });
+
+    totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+};
+
+function showSuccessMsg(message) {
+    const msg = document.createElement("div");
+    msg.textContent = message;
+    msg.className = `fixed top-5 right-5 bg-green-600 text-white px-4 py-2 rounded shadow-md transition-opacity duration-500 opacity-100 z-50`
+    document.body.appendChild(msg);
+
+    setTimeout(() => {
+        msg.style.opacity = "0";
+        setTimeout(() => msg.remove(), 500);
+    }, 2000);
 }
+
+// Listen for update no reload needed
+window.addEventListener("storage", (e) => {
+    if(e.key === "cart") {
+        loadCartItems();
+    }
+})
+
 
     

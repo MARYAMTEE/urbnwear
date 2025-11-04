@@ -152,6 +152,26 @@
                 <!-- Tab Contents -->
                 <div class="clothing__items grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-y-8 gap-x-2 sm:gap-4 w-full max-w-[48rem] m-auto"></div>
             </div>
+        </section>
+
+        <section class="cart__container">
+            <div class="cart__header">
+                <h2>Your Cart</h2>
+
+                <button type="button" class="close__cart" aria-label="close cart">
+                    <i class="fa-solid fa-xmark close" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="empty__message text-center"> Your cart is empty 🛒</div>
+
+            <div class="cart__items"></div>
+            <p class="cart__total"></p>
+
+            <div class="class__footer">
+                <button class="checkout__btn hidden">Proceed to Checkout</button>
+            </div>
+        </section>
     </main>
 </body>
 </html>

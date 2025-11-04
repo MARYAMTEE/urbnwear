@@ -194,6 +194,7 @@
         to { transform: scale(1); opacity: 1; }
     }
 
+    
 
     @media (min-width: 40rem) {
         .clothing__banner::after {
