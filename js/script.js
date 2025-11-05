@@ -8,14 +8,12 @@ const overlay = document.querySelector(".overlay");
 
 openMenu.addEventListener("click", () => {
     navMenu.classList.toggle("toggle");
-
     logoText.classList.add("hidden");
     overlay.classList.add("active");
 });
 
 closeMenu.addEventListener("click", () => {
     navMenu.classList.remove("toggle");
-
     logoText.classList.remove("hidden");
     overlay.classList.remove("active");
 });
@@ -59,7 +57,6 @@ function displayProducts(type) {
             </div>
         </div>
         `).join("");
-    // setupProductDetails();
 }
 
 // Save scroll before opening a product page
@@ -121,6 +118,7 @@ function loadCartItems() {
     if(cart.length === 0) {
         emptyMsg.classList.remove("hidden");
         totalDisplay.textContent = "";
+        checkoutBtn.classList.add("hidden");
         return;
     } else {
         emptyMsg.classList.add("hidden");
@@ -149,12 +147,18 @@ function loadCartItems() {
         const deleBtn = itemEl.querySelector(".delete__btn");
         deleBtn.addEventListener("click", () => {
             // remove item from cart
-            cart.splice(index, 1);
-            localStorage.setItem("cart", JSON.stringify(cart));
+            const updatedCart = cart.filter(p => p.id !== item.id);
+            localStorage.setItem("cart", JSON.stringify(updatedCart));
 
             loadCartItems();
-
+            updateCartCount();
             showSuccessMsg(`${item.name} was removed from your cart.`);
+
+            if (updateCartCount.length === 0) {
+                emptyMsg.classList.remove("hidden");
+                totalDisplay.textContent = "";
+                checkoutBtn.classList.add("hidden");
+            }
         });
 
         total += item.price * item.quantity;
@@ -164,6 +168,7 @@ function loadCartItems() {
     totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
 };
 
+// Success message when product is added to the cart
 function showSuccessMsg(message) {
     const msg = document.createElement("div");
     msg.textContent = message;
@@ -174,14 +179,36 @@ function showSuccessMsg(message) {
         msg.style.opacity = "0";
         setTimeout(() => msg.remove(), 500);
     }, 2000);
-}
+};
+
+// Update cart
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const count = cart.length;
+    const countEl = document.getElementById("product__count");
+
+    const uniqueProductCount = cart.length;
+    
+    if (uniqueProductCount > 0) {
+        countEl.textContent = uniqueProductCount;
+        countEl.classList.remove("hidden");
+    } else {
+        countEl.classList.add("hidden");
+    }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadCartItems();
+    updateCartCount();
+})
 
 // Listen for update no reload needed
 window.addEventListener("storage", (e) => {
     if(e.key === "cart") {
         loadCartItems();
+        updateCartCount();
     }
-})
+});
 
 
     

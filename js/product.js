@@ -30,6 +30,7 @@
     })
     .catch(err => console.error("Error loading data.json:", err));
 
+    // addition and subtraction of quantity
     function setupQuantityButtons() {
         const buttons = document.querySelectorAll(".plus__btn, .minus__btn");
 
@@ -90,12 +91,7 @@
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        
         alert(`${product.name} added to your cart!`);
     }
-
-    const displayQnty = document.querySelector(".display__quantity");
-    const emptyMsg = document.querySelector(".empty-message");
-    const deleteBtn = document.querySelector(".delete__icon");
 
     
