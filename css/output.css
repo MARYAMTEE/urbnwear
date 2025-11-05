@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-500: oklch(76.9% 0.188 70.08);
-    --color-green-600: oklch(62.7% 0.194 149.214);
     --color-emerald-500: oklch(69.6% 0.17 162.48);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-pink-500: oklch(65.6% 0.241 354.308);
@@ -194,11 +193,20 @@
   .relative {
     position: relative;
   }
+  .sticky {
+    position: sticky;
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
   .top-5 {
     top: calc(var(--spacing) * 5);
+  }
+  .top-\[6rem\] {
+    top: 6rem;
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
   }
   .right-5 {
     right: calc(var(--spacing) * 5);
@@ -214,6 +222,27 @@
   }
   .z-50 {
     z-index: 50;
+  }
+  .z-\[5\] {
+    z-index: 5;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
   }
   .m-auto {
     margin: auto;
@@ -245,9 +274,6 @@
   .inline-block {
     display: inline-block;
   }
-  .h-12 {
-    height: calc(var(--spacing) * 12);
-  }
   .h-full {
     height: 100%;
   }
@@ -256,9 +282,6 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-12 {
-    width: calc(var(--spacing) * 12);
   }
   .w-auto {
     width: auto;
@@ -312,6 +335,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-14 {
+    gap: calc(var(--spacing) * 14);
+  }
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
   }
@@ -334,20 +360,17 @@
   .bg-\[var\(--bronco\)\] {
     background-color: var(--bronco);
   }
+  .bg-\[var\(--congo-brown\)\] {
+    background-color: var(--congo-brown);
+  }
   .bg-\[var\(--light-antique\)\] {
     background-color: var(--light-antique);
-  }
-  .bg-green-600 {
-    background-color: var(--color-green-600);
   }
   .bg-white {
     background-color: var(--color-white);
   }
   .bg-\[url\(\'\.\.\/images\/layered-peak\.svg\'\)\] {
     background-image: url('../images/layered-peak.svg');
-  }
-  .bg-\[url\(\'\.\.\/images\/mobile-background\.jpg\'\)\] {
-    background-image: url('../images/mobile-background.jpg');
   }
   .bg-cover {
     background-size: cover;
@@ -358,8 +381,8 @@
   .bg-no-repeat {
     background-repeat: no-repeat;
   }
-  .object-cover {
-    object-fit: cover;
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -416,6 +439,9 @@
   .tracking-widest {
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
+  }
+  .text-\[var\(--tamarind\)\] {
+    color: var(--tamarind);
   }
   .text-amber-500 {
     color: var(--color-amber-500);
@@ -497,14 +523,14 @@
       gap: calc(var(--spacing) * 4);
     }
   }
-  .sm\:bg-\[url\(\'\.\.\/images\/new-bg\.jpg\'\)\] {
-    @media (width >= 40rem) {
-      background-image: url('../images/new-bg.jpg');
-    }
-  }
   .md\:absolute {
     @media (width >= 48rem) {
       position: absolute;
+    }
+  }
+  .md\:relative {
+    @media (width >= 48rem) {
+      position: relative;
     }
   }
   .md\:top-0 {
@@ -512,14 +538,14 @@
       top: calc(var(--spacing) * 0);
     }
   }
+  .md\:top-auto {
+    @media (width >= 48rem) {
+      top: auto;
+    }
+  }
   .md\:right-0 {
     @media (width >= 48rem) {
       right: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:right-4 {
-    @media (width >= 48rem) {
-      right: calc(var(--spacing) * 4);
     }
   }
   .md\:left-0 {
@@ -535,6 +561,11 @@
   .md\:mr-16 {
     @media (width >= 48rem) {
       margin-right: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
     }
   }
   .md\:hidden {
@@ -680,11 +711,6 @@
       min-height: 45rem;
     }
   }
-  .lg\:pt-4 {
-    @media (width >= 64rem) {
-      padding-top: calc(var(--spacing) * 4);
-    }
-  }
 }
 :root {
   --bronco: hsla(30, 17%, 75%, 0.589);
@@ -716,17 +742,17 @@
   .nav__menu {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: -100%;
     width: 100%;
     height: 100%;
     padding: 2rem 1.5rem 0;
     color: var(--tamarind);
     background-color: var(--bronco);
-    transition: right 0.3s ease-in;
+    transition: left 0.3s ease-in;
     z-index: 1000;
   }
   .nav__menu.toggle {
-    right: 0;
+    left: 0;
   }
   .nav__list {
     display: block;
@@ -760,7 +786,7 @@
     background-color: transparent;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    z-index: 50;
+    z-index: 20;
   }
   .product {
     display: flex;
@@ -846,20 +872,41 @@
       opacity: 1;
     }
   }
-  @media (min-width: 40rem) {
-    .clothing__banner::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: hsla(5, 41%, 12%, 0.466);
-      z-index: 1;
-    }
+  .clothing__banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to bottom, hsla(13, 24%, 29%, 1) 0%, hsla(13, 24%, 29%, 0.8) 25%, hsla(13, 24%, 29%, 0.4) 60%, hsla(13, 24%, 29%, 0) 100% );
+    z-index: 1;
+  }
+  .cart__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    margin-block: 2rem;
+  }
+  .product__details {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    text-align: start;
+  }
+  .product__image {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    background-color: white;
   }
   @media (min-width: 48rem) {
     .nav__menu {
       position: relative;
       top: auto;
-      right: auto;
+      left: auto;
       padding-inline: 1rem;
       background-color: transparent;
       display: flex;
@@ -900,7 +947,7 @@
       background-color: var(--tamarind);
     }
     .shopping__icon {
-      margin-left: 1.5rem;
+      margin-left: -3.5rem;
     }
   }
 }

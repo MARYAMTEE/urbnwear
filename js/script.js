@@ -86,20 +86,21 @@ tabButtons.forEach(btn => {
 });
 
 // Toggle cart when cart icon is clicked
-const cartIcon = document.querySelector(".shopping");
+const cartIcon = document.querySelectorAll(".shopping");
 const cartContainer = document.querySelector(".cart__container");
+const closeCart = document.querySelector(".close__cart");
 
-cartIcon.addEventListener("click", () => {
-    cartContainer.classList.toggle("hidden");
-    cartContainer.classList.toggle("translate-x-full");
-});
+cartIcon.forEach(icon => {
+    icon.addEventListener("click", () => {
+        cartContainer.classList.remove("hidden");
+        cartContainer.classList.toggle("translate-x-full");
+    })
+})
+
 
 // Close cart
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("close__cart")) {
+closeCart.addEventListener("click", (e) => {
     cartContainer.classList.add("hidden");
-    cartContainer.classList.add("translate-x-full");
-  }
 });
 
 
@@ -130,12 +131,12 @@ function loadCartItems() {
         itemEl.className = "cart__item";
 
         itemEl.innerHTML = `
-            <div>
-                <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-cover rounded">
+            <div class="product__details">
+                <img src="${item.image}" alt="${item.name}" class="product__image">
                 <div>
-                    <p>${item.name}</p>
-                    <p>$${item.price} x ${item.quantity}</p>
-                    <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                    <p class="product__price">${item.name}</p>
+                    <p class="product__quantity>$${item.price} x ${item.quantity}</p>
+                    <p class="price__total">$${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
             </div>
             <button type="button" class="delete__btn">
@@ -172,7 +173,7 @@ function loadCartItems() {
 function showSuccessMsg(message) {
     const msg = document.createElement("div");
     msg.textContent = message;
-    msg.className = `fixed top-5 right-5 bg-green-600 text-white px-4 py-2 rounded shadow-md transition-opacity duration-500 opacity-100 z-50`
+    msg.className = `fixed top-5 right-5 bg-[var(--bronco)] text-[var(--tamarind)] px-4 py-2 rounded shadow-md transition-opacity duration-500 opacity-100 z-50`
     document.body.appendChild(msg);
 
     setTimeout(() => {
@@ -185,16 +186,17 @@ function showSuccessMsg(message) {
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const count = cart.length;
-    const countEl = document.getElementById("product__count");
+    const countEls = document.querySelectorAll(".item__count");
 
     const uniqueProductCount = cart.length;
-    
-    if (uniqueProductCount > 0) {
-        countEl.textContent = uniqueProductCount;
-        countEl.classList.remove("hidden");
-    } else {
-        countEl.classList.add("hidden");
-    }
+    countEls.forEach(countEl => {
+        if (uniqueProductCount > 0) {
+            countEl.textContent = uniqueProductCount;
+            countEl.classList.remove("hidden");
+        } else {
+            countEl.classList.add("hidden");
+        }
+    })
 };
 
 document.addEventListener("DOMContentLoaded", () => {
