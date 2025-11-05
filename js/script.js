@@ -131,12 +131,12 @@ function loadCartItems() {
         itemEl.className = "cart__item";
 
         itemEl.innerHTML = `
-            <div class="product__details">
-                <img src="${item.image}" alt="${item.name}" class="product__image">
+            <div class="item__details">
+                <img src="${item.image}" alt="${item.name}" class="item__image">
                 <div>
-                    <p class="product__price">${item.name}</p>
-                    <p class="product__quantity>$${item.price} x ${item.quantity}</p>
-                    <p class="price__total">$${(item.price * item.quantity).toFixed(2)}</p>
+                    <h4 class="item__price">${item.name}</h4>
+                    <p class="item__quantity">$${item.price} x ${item.quantity}</p>
+                    <p class="item__total">$${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
             </div>
             <button type="button" class="delete__btn">
