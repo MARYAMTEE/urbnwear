@@ -102,21 +102,22 @@
 
     <main class="clothing__main relative">
         <!-- Banner section -->
-        <section class="clothing__banner text-center w-full min-h-[25rem] lg:min-h-[45rem] text-white relative">
-            <div class="flex flex-col items-center justify-center w-full h-full">
-                 <!-- background layer -->
-                <div class="absolute top-0 left-0 w-1/2 h-full bg-[url('../images/layered-peak.svg')] bg-cover bg-center bg-no-repeat z-[5] md:left-auto md:right-0 md:transform md:rotate-180"></div>
-    
-                <!-- text container -->
-                <div class="banner__right w-full h-full flex flex-col px-4 max-w-[25rem] md:items-start md:text-left md:p-16 md:max-w-full z-10">
-                    <h1 class="banner__title text-3xl font-semibold mb-2 leading-8 uppercase md:text-4xl md:leading-12 md:max-w-[29rem]">Redefine Your Style with Confidence</h1>
-                    <p class="banner__text mb-6 w-full md:max-w-[25rem]">Create amazing experiences with clean and modern design.</p>
-                    <button class="w-auto self-center md:self-start border-1 bg-[var(--bronco)] text-white rounded-lg py-4 px-6 uppercase tracking-widest shadow-[0_4px_10px_0_var(--copper)] transform transition duration-300 hover:-translate-y-2">Explore Collection</button>
-                </div>
+        <section class="clothing__banner flex flex-col justify-center text-center w-full min-h-[25rem] md:min-h-[35rem] lg:min-h-[45rem] text-white relative">
+            <!-- background layer -->
+            <div class="absolute top-0 left-0 w-1/2 h-full bg-[url('../images/layered-peak.svg')] bg-cover bg-center bg-no-repeat z-[5] md:left-auto md:right-0 md:transform md:rotate-180"></div>
+
+            <!-- text container -->
+            <div class="banner__right w-full h-full flex flex-col px-4 max-w-[25rem] md:items-start md:text-left md:px-16 lg:mb-24 md:max-w-full z-10">
+                <h1 class="banner__title text-3xl font-semibold mb-2 leading-8 uppercase md:text-4xl md:leading-12 md:max-w-[29rem]">Redefine Your Style with Confidence</h1>
+                <p class="banner__text mb-6 w-full md:max-w-[25rem]">Create amazing experiences with clean and modern design.</p>
+                <button class="w-auto self-center md:self-start border-1 bg-[var(--bronco)] text-white rounded-lg py-4 px-6 uppercase tracking-widest shadow-[0_4px_10px_0_var(--copper)] transform transition duration-300 hover:-translate-y-2">Explore Collection</button>
             </div>
 
             <div class="image__gallery">
-
+                <img src="./images/gallery-1.jpg" alt="gallery Image" class="gallery__img">
+                <img src="./images/gallery-2.jpg" alt="gallery Image" class="gallery__img">
+                <img src="./images/gallery-3.jpg" alt="gallery Image" class="gallery__img">
+                <img src="./images/gallery-4.jpg" alt="gallery Image" class="gallery__img">
             </div>
         </section>
         
@@ -160,7 +161,7 @@
             </div>
         </section>
 
-    <!-- Tab section -->
+        <!-- Tab section -->
         <section class="clothing__shop">
             <div class="shop__products px-4">
                 <!-- Tabs -->
@@ -175,7 +176,7 @@
             </div>
         </section>
 
-        <section class="cart__container fixed top-[6rem] right-0 bg-[var(--congo-brown)] text-white w-full z-20 text-center p-4 hidden md:top-[8.5rem] md:w-[50%]">
+        <section class="cart__container hidden">
             <div class="cart__header flex justify-between relative">
                 <h3 class="cart__title text-xl">Your Cart</h3>
 

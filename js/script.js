@@ -49,7 +49,12 @@ function displayProducts(type) {
     const filtered = productsData.filter(p => p.type.includes(type));
     productsContainer.innerHTML = filtered.map(product => `
         <div class="product">
-            <img src="${product.image}" alt="${product.name}">
+            <div class="relative">
+                <img src="${product.image}" alt="${product.name}" class="product__img">
+                <button type="button" aria-label="wish icon" class="wish__btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
             <div class="product__text">
                 <h4 class="product__title">${product.name}</h4>
                 <p class="product__price">$${product.price}</p>
@@ -90,18 +95,16 @@ const cartIcon = document.querySelectorAll(".shopping");
 const cartContainer = document.querySelector(".cart__container");
 const closeCart = document.querySelector(".close__cart");
 
-cartIcon.forEach(icon => {
-    icon.addEventListener("click", () => {
-        cartContainer.classList.remove("hidden");
-        cartContainer.classList.toggle("translate-x-full");
+    cartIcon.forEach(icon => {
+        icon.addEventListener("click", () => {
+            cartContainer.classList.remove("hidden");
+        })
     })
-})
 
-
-// Close cart
-closeCart.addEventListener("click", (e) => {
-    cartContainer.classList.add("hidden");
-});
+    // Close cart
+    closeCart.addEventListener("click", (e) => {
+        cartContainer.classList.add("hidden");
+    });
 
 
 // Load Cart items 
@@ -151,14 +154,25 @@ function loadCartItems() {
             const updatedCart = cart.filter(p => p.id !== item.id);
             localStorage.setItem("cart", JSON.stringify(updatedCart));
 
+            // Reload UI
             loadCartItems();
             updateCartCount();
             showSuccessMsg(`${item.name} was removed from your cart.`);
 
-            if (updateCartCount.length === 0) {
+             const cartContainer = document.querySelector(".cart__container");
+
+            // Handle empty cart
+            if (updatedCart.length === 0) {
                 emptyMsg.classList.remove("hidden");
-                totalDisplay.textContent = "";
                 checkoutBtn.classList.add("hidden");
+
+                // Hide cart container after 2 seconds
+                setTimeout(() => {
+                    cartContainer.classList.add("hidden");
+                }, 2000);
+            } else {
+                emptyMsg.classList.add("hidden");
+                checkoutBtn.classList.remove("hidden");
             }
         });
 
@@ -198,6 +212,29 @@ function updateCartCount() {
         }
     })
 };
+
+// wishList icon
+const wishList = document.querySelectorAll(".wish__btn");
+
+wishList.forEach(wish => {
+    wish.addEventListener("click", () => {
+        const icon = wish.querySelector("i");
+        console.log('clicked wish, before:', wish.className, icon.className);
+
+        // Toggle icon type
+        if (icon.classList.contains("fa-regular")) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+        } else {
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular")
+        }
+
+        wish.classList.toggle("active");
+
+        console.log('after:', wish.className, icon.className);
+    })
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     loadCartItems();

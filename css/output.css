@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -204,12 +204,6 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
-  .top-\[6rem\] {
-    top: 6rem;
-  }
-  .right-0 {
-    right: calc(var(--spacing) * 0);
-  }
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
@@ -218,9 +212,6 @@
   }
   .z-10 {
     z-index: 10;
-  }
-  .z-20 {
-    z-index: 20;
   }
   .z-50 {
     z-index: 50;
@@ -297,10 +288,6 @@
   .max-w-\[48rem\] {
     max-width: 48rem;
   }
-  .translate-x-full {
-    --tw-translate-x: 100%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
@@ -362,9 +349,6 @@
   .bg-\[var\(--bronco\)\] {
     background-color: var(--bronco);
   }
-  .bg-\[var\(--congo-brown\)\] {
-    background-color: var(--congo-brown);
-  }
   .bg-\[var\(--light-antique\)\] {
     background-color: var(--light-antique);
   }
@@ -382,9 +366,6 @@
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
-  }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -534,24 +515,9 @@
       position: absolute;
     }
   }
-  .md\:relative {
-    @media (width >= 48rem) {
-      position: relative;
-    }
-  }
   .md\:top-0 {
     @media (width >= 48rem) {
       top: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:top-\[8\.5rem\] {
-    @media (width >= 48rem) {
-      top: 8.5rem;
-    }
-  }
-  .md\:top-auto {
-    @media (width >= 48rem) {
-      top: auto;
     }
   }
   .md\:right-0 {
@@ -579,9 +545,9 @@
       display: none;
     }
   }
-  .md\:w-\[50\%\] {
+  .md\:min-h-\[35rem\] {
     @media (width >= 48rem) {
-      width: 50%;
+      min-height: 35rem;
     }
   }
   .md\:w-full {
@@ -654,14 +620,14 @@
       background-color: var(--transparent-tamarind);
     }
   }
-  .md\:p-16 {
-    @media (width >= 48rem) {
-      padding: calc(var(--spacing) * 16);
-    }
-  }
   .md\:px-4 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:px-16 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 16);
     }
   }
   .md\:py-0 {
@@ -715,6 +681,11 @@
     @media (width >= 48rem) {
       --tw-leading: calc(var(--spacing) * 12);
       line-height: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:mb-24 {
+    @media (width >= 64rem) {
+      margin-bottom: calc(var(--spacing) * 24);
     }
   }
   .lg\:min-h-\[45rem\] {
@@ -805,8 +776,9 @@
     align-items: center;
     text-align: center;
     margin: auto;
+    position: relative;
   }
-  .product img {
+  .product__img {
     width: 5rem;
     height: 7rem;
     object-fit: cover;
@@ -939,6 +911,33 @@
     background-color: white;
     margin-block-end: 1rem;
   }
+  .image__gallery {
+    display: none;
+  }
+  .cart__container {
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    width: 100%;
+    background-color: var(--congo-brown);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    overflow-y: auto;
+    transition: left 0.3s ease-in;
+    z-index: 20;
+  }
+  .wish__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .wish__btn i {
+    font-size: 0.75rem;
+  }
   @media (min-width: 48rem) {
     .nav__menu {
       position: relative;
@@ -965,6 +964,23 @@
     .cart__item {
       margin-block: 0;
     }
+    .image__gallery {
+      display: flex;
+      gap: 2rem;
+      position: absolute;
+      bottom: 0;
+      margin-left: 4rem;
+    }
+    .gallery__img {
+      width: 80px;
+      border-radius: 10px;
+      border: 1px solid var(--antique-brass);
+    }
+    .cart__container {
+      width: 50%;
+      top: 8.5rem;
+      max-height: calc(100vh-8rem);
+    }
   }
   @media (min-width: 64rem) {
     .nav__item {
@@ -986,25 +1002,15 @@
     .nav__item.active::before, .nav__item.active::after {
       background-color: var(--tamarind);
     }
-    .cart__items {
-      width: 75%;
+    .gallery__img {
+      width: 150px;
+    }
+    .cart__container {
+      width: 45%;
+      top: 7.5rem;
+      max-height: calc(100vh-7.5rem);
     }
   }
-}
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -1112,12 +1118,24 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
@@ -1142,6 +1160,9 @@
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-duration: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
     }
   }
 }

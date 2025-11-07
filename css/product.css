@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bronco: hsla(30, 17%, 75%, 0.589);
+    --tamarind: hsl(5, 41%, 12%);
+    --congo-brown: hsla(13, 24%, 29%, 1.00);
+    --copper: hsl(27, 55%, 42%);
+    --transparent-tamarind: hsla(5, 41%, 12%, 0.075);
+
+    --antique-brass: hsl(21, 53%, 59%);
+    --light-antique: hsla(21, 53%, 59%, 0.089);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+}
+
+.product__detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 4rem;
+}
+
+.detail__img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center;
+    background-color: white;
+}
