@@ -11,6 +11,7 @@
         if(product) {
             document.querySelector(".detail__img").src = product.image;
             document.querySelector(".detail__name").textContent = product.name;
+            document.querySelector(".detail__description").textContent = product.description;
             document.querySelector(".detail__price").textContent = `$${product.price}`;
             document.querySelector(".quantity__boxes").dataset.id = product.id;
             const cartBtn = document.querySelector(".cart__btn") ;
@@ -38,7 +39,7 @@
             btn.addEventListener("click", () => {
                 const quantityBox = btn.closest(".quantity__boxes");
                 const productId = Number(quantityBox.dataset.id);
-                const product = productsData.find(p => p.id === productId);
+                const product = window.productsData.find(p => p.id === productId);
                 const displayQnty = quantityBox.querySelector(".display__quantity");
                 const detailPrice = document.querySelector(".detail__price");
                 const cartBtn = document.querySelector(".cart__btn");
