@@ -26,7 +26,7 @@
                 window.close();
             });
         } else {
-            document.querySelector(".product__detail").innerHTML = `<p>Product not found</p>`;
+            document.querySelector(".product__details").innerHTML = `<p>Product not found</p>`;
         }
     })
     .catch(err => console.error("Error loading data.json:", err));

@@ -317,6 +317,7 @@
         padding-block: 1rem;
         border-radius: 10px;
         cursor: pointer;
+        margin-bottom: 2rem;
     }
 
     .checkout__btn:hover {
