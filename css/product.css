@@ -21,6 +21,8 @@ img{
 body{
     font-family: "Poppins", sans-serif;
     background-color: white;
+    width: 100%;
+    height: 100%;
 }
 
 .product__details {
@@ -106,7 +108,6 @@ body{
 @media (min-width: 48rem) {
     body {
         height: 100vh;
-        overlay: hidden;
     }
     .product__details {
         max-width: 65rem;

@@ -916,7 +916,7 @@
   .cart__header::after {
     content: "";
     position: absolute;
-    top: 2.5rem;
+    top: 5rem;
     width: 100%;
     height: 1px;
     background-color: white;
@@ -949,7 +949,6 @@
     right: 0;
     top: 0;
     background-color: transparent;
-    border-radius: 50%;
     cursor: pointer;
   }
   .wish__btn i {

@@ -53,17 +53,29 @@ function displayProducts(type) {
         <div class="product">
             <div class="relative">
                 <img src="${product.image}" alt="${product.name}" class="product__img">
-                <button type="button" aria-label="wish icon" class="wish__btn">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
             </div>
             <div class="product__text">
                 <h4 class="product__title">${product.name}</h4>
                 <p class="product__price">$${product.price}</p>
                 <button type="button" onclick="openProductPage('${product.id}')" class="product__btn">View Details</button>
             </div>
+
+            <button type="button" aria-label="wish icon" class="wish__btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
         </div>
         `).join("");
+
+    // wish button toggle
+    const wishBtn = document.querySelectorAll(".wish__btn");
+    wishBtn.forEach(wBtn => {
+        wBtn.addEventListener("click", () => {
+            const icon = wBtn.querySelector("i");
+
+            icon.classList.toggle("fa-regular");
+            icon.classList.toggle("fa-solid");
+        });
+    })
 }
 
 // Save scroll before opening a product page
@@ -218,29 +230,6 @@ function updateCartCount() {
         }
     })
 };
-
-// wishList icon
-const wishList = document.querySelectorAll(".wish__btn");
-
-wishList.forEach(wish => {
-    wish.addEventListener("click", () => {
-        const icon = wish.querySelector("i");
-        console.log('clicked wish, before:', wish.className, icon.className);
-
-        // Toggle icon type
-        if (icon.classList.contains("fa-regular")) {
-            icon.classList.remove("fa-regular");
-            icon.classList.add("fa-solid");
-        } else {
-            icon.classList.remove("fa-solid");
-            icon.classList.add("fa-regular")
-        }
-
-        wish.classList.toggle("active");
-
-        console.log('after:', wish.className, icon.className);
-    })
-});
 
 document.addEventListener("DOMContentLoaded", () => {
     if (document.querySelector(".cart__items")) {
