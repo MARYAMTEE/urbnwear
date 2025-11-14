@@ -9,8 +9,8 @@
     --antique-brass: hsl(21, 53%, 59%);
     --light-antique: hsla(21, 53%, 59%, 0.089);
 
-    --silver: #68707d;
-    --black: #1d2025;
+    --silver: hsl(217, 9%, 45%);
+    --black: hsl(0, 0%, 10%);
 }
 
 img{
@@ -46,14 +46,14 @@ body{
 .detail__name {
     font-family: "Cormorant Garamond", serif;
     font-size: 2.5rem;
-    color: var(--silver);
+    color: var(--tamarind);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .details__title {
     font-weight: 600;
-    color: var(--black);
+    color: var(--congo-brown);
     letter-spacing: 3px;
 }
 
@@ -62,7 +62,7 @@ body{
 }
 
 .detail__price {
-    color: var(--black);
+    color: var(--tamarind);
     font-weight: 700;
     font-size: 3rem;
     font-family: "Cormorant Garamond", serif;
@@ -76,7 +76,7 @@ body{
 }
 
 .quantity__boxes {
-    border: 1px solid var(--tamarind);
+    border: 1px solid var(--congo-brown);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,12 +84,18 @@ body{
 
 .control__btn,
 .cart__btn {
-    background-color: var(--tamarind);
+    background-color: var(--congo-brown);
     padding: 1rem 2rem;
     color: white;
+    font-size: 1.5rem;
 }
 
 .cart__btn {
     width: 100%;
     border-radius: 10px;
+}
+
+.display__quantity {
+    color: var(--congo-brown);
+    font-size: 1.5rem;
 }

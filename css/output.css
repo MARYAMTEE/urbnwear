@@ -204,6 +204,9 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
@@ -267,11 +270,17 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .h-full {
     height: 100%;
   }
   .min-h-\[25rem\] {
     min-height: 25rem;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -288,11 +297,17 @@
   .max-w-\[48rem\] {
     max-width: 48rem;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-not-allowed {
     cursor: not-allowed;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-\[repeat\(auto-fit\,minmax\(10rem\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
@@ -341,6 +356,10 @@
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-1 {
     border-style: var(--tw-border-style);
@@ -451,6 +470,9 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .opacity-50 {
     opacity: 50%;
   }
@@ -468,6 +490,14 @@
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .backdrop-filter {
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -705,6 +735,8 @@
   --transparent-tamarind: hsla(5, 41%, 12%, 0.075);
   --antique-brass: hsl(21, 53%, 59%);
   --light-antique: hsl(21, 53%, 59%, 0.089);
+  --silver: hsl(217, 9%, 45%);
+  --black: hsl(0, 0%, 10%);
 }
 @layer components {
   * {
@@ -809,7 +841,7 @@
   }
   .clothing__main {
     background-color: white;
-    color: #1a1a1a;
+    color: var(--black);
   }
   .tab__btn {
     position: relative;
@@ -868,7 +900,7 @@
   }
   .cart__items {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   .cart__item:first-child {
     margin-block-start: 2rem;
@@ -880,7 +912,6 @@
     border: 1px solid white;
     border-radius: 10px;
     padding: 0.5rem 2rem;
-    margin-block: 1rem;
     width: 100%;
   }
   .item__details {
@@ -899,8 +930,10 @@
     background-color: white;
   }
   .item__price {
+    font-family: "Cormorant Garamond", serif;
     font-size: 1.1rem;
     font-weight: 500;
+    letter-spacing: 2px;
   }
   .item__quantity {
     font-size: 0.875rem;
@@ -926,11 +959,16 @@
     height: 100%;
     background-color: var(--congo-brown);
     color: white;
-    padding: 1rem;
+    padding-block: 1rem 6rem;
+    padding-inline: 1rem;
     text-align: center;
     overflow-y: auto;
     transition: left 0.3s ease-in;
     z-index: 20;
+  }
+  .cart__total {
+    margin-block: 2rem;
+    font-size: 2rem;
   }
   .wish__btn {
     position: absolute;
@@ -942,6 +980,16 @@
   }
   .wish__btn i {
     font-size: 0.75rem;
+  }
+  .checkout__btn {
+    border: 5px solid var(--copper);
+    width: 100%;
+    padding-block: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .checkout__btn:hover {
+    background-color: var(--copper);
   }
   @media (min-width: 48rem) {
     .nav__menu {
@@ -1119,6 +1167,47 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1164,6 +1253,16 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
