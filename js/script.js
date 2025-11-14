@@ -38,12 +38,14 @@ const tabButtons = document.querySelectorAll(".tab__btn");
 let productsData = [];
 
 // Fetch data
-fetch("data.json")
-    .then(res => res.json())
-    .then(data => {
-        productsData = data;
-        displayProducts("featured");
-    });
+if (productsContainer) {
+    fetch("data.json")
+        .then(res => res.json())
+        .then(data => {
+            productsData = data;
+            displayProducts("featured");
+        });
+}
 
 function displayProducts(type) {
     const filtered = productsData.filter(p => p.type.includes(type));
@@ -102,9 +104,11 @@ const closeCart = document.querySelector(".close__cart");
     })
 
     // Close cart
-    closeCart.addEventListener("click", (e) => {
-        cartContainer.classList.add("hidden");
-    });
+    if (closeCart) {
+        closeCart.addEventListener("click", (e) => {
+            cartContainer.classList.add("hidden");
+        });
+    }
 
 
 // Load Cart items 
@@ -117,7 +121,9 @@ function loadCartItems() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     let total = 0;
 
-    cartItemsContainer.innerHTML = "";
+    if (cartItemsContainer) {
+        cartItemsContainer.innerHTML = "";
+    }
 
     if(cart.length === 0) {
         emptyMsg.classList.remove("hidden");
@@ -187,7 +193,7 @@ function loadCartItems() {
 function showSuccessMsg(message) {
     const msg = document.createElement("div");
     msg.textContent = message;
-    msg.className = `fixed top-5 right-5 bg-[var(--bronco)] text-[var(--tamarind)] px-4 py-2 rounded shadow-md transition-opacity duration-500 opacity-100 z-50`
+    msg.className = `fixed top-5 right-5 bg-[var(--antique-brass)] text-[var(--tamarind)] px-4 py-2 rounded shadow-md transition-opacity duration-500 opacity-100 z-50`
     document.body.appendChild(msg);
 
     setTimeout(() => {
@@ -237,8 +243,10 @@ wishList.forEach(wish => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadCartItems();
-    updateCartCount();
+    if (document.querySelector(".cart__items")) {
+        loadCartItems();
+        updateCartCount();
+    }
 })
 
 // Listen for update no reload needed

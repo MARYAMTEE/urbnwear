@@ -12,12 +12,97 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="stylesheet" href="./css/product.css">
     <!-- js -->
+     <script src="./js/script.js" defer></script>
     <script src="./js/product.js" defer></script>
 </head>
 <body>
-    <div class="product__detail">
+    <header class="sticky top-0 z-50 py-8 bg-white md:py-0">
+        <div class="logo__container flex justify-between items-center px-4 md:hidden">
+            <button type="button" class="open__menu inline-block text-2xl" aria-label="open menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            
+            <h1 class="logo text-3xl font-semibold">URBNWEAR</h1>
+
+            <div class="shopping__icon flex gap-4">
+                <button type="button" class="wish__list" aria-label="Wish List">
+                    <i class="fa-regular fa-heart wish" aria-hidden="true"></i>
+                </button>
+                
+                <div class="cart__icon-container">
+                    <button type="button" class="shopping" aria-label="Shopping Icon">
+                        <i class="fa-solid fa-cart-shopping shopping" aria-hidden="true"></i>
+                    </button>
+                    <span class="item__count hidden">0</span>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Primary" class="nav__menu">
+            <div class="nav__header flex gap-14 items-center">
+                <button type="button" class="close__menu md:hidden" aria-label="close menu">
+                    <i class="fa-solid fa-xmark close" aria-hidden="true"></i>
+                </button>
+    
+                <h1 class="logo logo--mobile text-3xl font-semibold md:pt-6">URBNWEAR</h1>
+            </div>
+
+            <ul class="nav__list text-center font-medium py-8 uppercase md:pt-8 md:pb-4">
+                <li class="nav__item active"><a href="#" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Journal</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            </ul>
+
+            <div class="shopping__icon gap-4 hidden md:flex">
+                <button type="button" class="wish__list" aria-label="Wish List">
+                    <i class="fa-regular fa-heart wish" aria-hidden="true"></i>
+                </button>
+                
+                <div class="cart__icon-container">
+                    <button type="button" class="shopping" aria-label="Shopping Icon">
+                        <i class="fa-solid fa-cart-shopping shopping" aria-hidden="true"></i>
+                    </button>
+                    <span class="item__count hidden">0</span>
+                </div>
+            </div>
+
+            <div class="auth__container text-center flex flex-col items-center gap-10 md:bg-[var(--transparent-tamarind)] md:absolute md:top-0 md:left-0 md:right-0 md:flex-row-reverse md:w-full md:justify-flex-end md:text-sm md:px-4 md:py-2">
+                <ul  class="login__details flex flex-col gap-6 md:flex-row md:gap-2">
+                    <li class="login__item"><a href="#" class="log__in">Log in</a></li>
+                    <li class="login__item"><a href="#">Create account</a></li>
+                </ul>
+    
+                <div class="socials">
+                    <ul class="social__icons flex items-center justify-center gap-4">
+                        <li class="social__list transform transition duration-300 hover:-translate-y-1">
+                            <a href="#" class="social__links text-[1.3rem] md:text-[1rem]">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social__list transform transition duration-300 hover:-translate-y-1">
+                            <a href="#" class="social__links text-[1.3rem] md:text-[1rem]">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li class="social__list transform transition duration-300 hover:-translate-y-1">
+                            <a href="#" class="social__links text-[1.3rem] md:text-[1rem]">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="overlay"></div>
+
+    <main class="product__detail">
         <img src="" alt="Product Image" class="detail__img">
 
 
@@ -31,7 +116,7 @@
             <p class="detail__price"></p>
         </div>
         <div class="carts__controls">
-            <div class="quantity__boxes" data-id="">
+            <div class="quantity__boxes" data-id="1">
                 <button type="button" class="minus__btn" aria-label="Decrease quantity">
                     <i class="fa-solid fa-minus" aria-hidden="true"></i>
                 </button>
@@ -43,6 +128,6 @@
             <button type="button" class="cart__btn">Add to Cart</button>
             <button type="button" class="buy__btn">Proceed to Checkout</button>
         </div>
-    </div>     
+    </main>     
 </body>
 </html>

@@ -8,7 +8,7 @@
     --transparent-tamarind: hsla(5, 41%, 12%, 0.075);
 
     --antique-brass: hsl(21, 53%, 59%);
-    --light-antique: hsla(21, 53%, 59%, 0.089);
+    --light-antique: hsl(21, 53%, 59%, 0.089);
 }
 
 @layer components {
@@ -137,6 +137,7 @@
         padding: 0.5rem 1rem;
         background-color: var(--bronco);
         font-size: 0.75rem;
+        border-radius: 7px;
         cursor: pointer;
     }
 
