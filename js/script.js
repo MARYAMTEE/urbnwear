@@ -43,7 +43,9 @@ if (productsContainer) {
         .then(res => res.json())
         .then(data => {
             productsData = data;
+
             displayProducts("featured");
+            displayWishList(productsData);
         });
 }
 
@@ -60,7 +62,7 @@ function displayProducts(type) {
                 <button type="button" onclick="openProductPage('${product.id}')" class="product__btn">View Details</button>
             </div>
 
-            <button type="button" aria-label="wish icon" class="wish__btn">
+            <button type="button" aria-label="wish icon" class="wish__btn" data-id="${product.id}">
                     <i class="fa-regular fa-heart"></i>
                 </button>
         </div>
@@ -68,14 +70,31 @@ function displayProducts(type) {
 
     // wish button toggle
     const wishBtn = document.querySelectorAll(".wish__btn");
+
     wishBtn.forEach(wBtn => {
         wBtn.addEventListener("click", () => {
+            const productId = wBtn.dataset.id;
+            updateWishlist(productId);
             const icon = wBtn.querySelector("i");
 
             icon.classList.toggle("fa-regular");
             icon.classList.toggle("fa-solid");
+
+            displayWishList(productsData);
         });
-    })
+    });
+}
+
+function updateWishlist(id) {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    if(wishlist.includes(id)) {
+        wishlist = wishlist.filter(item => item !== id);
+    } else {
+        wishlist.push(id);
+    }
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
 }
 
 // Save scroll before opening a product page
@@ -246,5 +265,26 @@ window.addEventListener("storage", (e) => {
     }
 });
 
+// Wish List
+function displayWishList(productsData) {
+    const list = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const container = document.querySelector(".wishlist__items");
 
+    if(!container) return;
     
+    const wished = productsData.filter(p => list.includes(String(p.id)));
+
+    if(wished.length === 0) {
+        container.innerHTML = "<p>No items in wishlist</p>";
+        return;
+    }
+
+    container.innerHTML = wished.map(product => `
+        <div class="wishlist__mini">
+            <img src="${product.image}" alt="${product.name}">
+            <div>
+                <p>${product.name}</p>
+            </div>
+        </div>
+        `).join("");
+}
