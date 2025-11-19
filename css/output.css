@@ -1004,6 +1004,7 @@
     grid-template-columns: repeat(auto-fit,minmax(6rem,1fr));
     align-items: flex-end;
     gap: 1rem;
+    margin-block-start: 3rem;
   }
   .wishlist__mini {
     position: relative;
@@ -1026,9 +1027,10 @@
     font-family: "Cormorant Garamond", serif;
     font-size: 1rem;
     color: var(--tamarind);
+    margin-block-start: 0.5rem;
   }
   .remove__icon {
-    color: var(--tamarind);
+    color: var(--congo-brown);
   }
   @media (min-width: 48rem) {
     .nav__menu {
