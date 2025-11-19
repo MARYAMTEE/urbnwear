@@ -135,7 +135,7 @@ tabButtons.forEach(btn => {
 });
 
 // Toggle cart when cart icon is clicked
-const cartIcon = document.querySelectorAll(".shopping");
+const cartIcon = document.querySelectorAll(".cart__icon-container");
 const cartContainer = document.querySelector(".cart__container");
 const closeCart = document.querySelector(".close__cart");
 
@@ -286,7 +286,7 @@ function displayWishList(productsData) {
     const wished = productsData.filter(p => list.includes(String(p.id)));
 
     if(wished.length === 0) {
-        container.innerHTML = "<p>No items in wishlist</p>";
+        container.innerHTML = "<p class='text-center text-sm py-8 italic'>No items in wishlist</p>";
         return;
     }
 

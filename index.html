@@ -27,14 +27,14 @@
 
             <div class="shopping__icon flex gap-4">
                 <button type="button" class="wish__list" aria-label="Wish List">
-                    <i class="fa-regular fa-heart wish" aria-hidden="true"></i>
+                    <i class="fa-regular fa-user"></i>
                 </button>
                 
-                <div class="cart__icon-container">
+                <div class="cart__icon-container relative cursor-pointer">
                     <button type="button" class="shopping" aria-label="Shopping Icon">
                         <i class="fa-solid fa-cart-shopping shopping" aria-hidden="true"></i>
                     </button>
-                    <span class="item__count hidden">0</span>
+                    <span class="item__count hidden absolute top-0 left-1/2 -translate-x-1/2 border-2 border-[var(--copper)] rounded-lg w-4 h-4 z-10 bg-[var(--copper)] text-white flex items-center justify-center text-xs">0</span>
                 </div>
             </div>
         </div>
@@ -185,7 +185,7 @@
                 </button>
             </div>
 
-            <div class="empty__message text-center py-8"> Your cart is empty 🛒</div>
+            <div class="empty__message text-center text-sm py-8 italic"> Your cart is empty 🛒</div>
 
             <div class="cart__items"></div>
             <p class="cart__total"></p>
@@ -195,7 +195,10 @@
             </div>
 
             <div class="wishlist__section">
-                <h3 class="wishlist__header text-2xl">Your Wishlist</h3>
+                <div class="wish__header relative">
+                    <h3 class="wishlist__header text-left text-2xl">Your Wishlist</h3>
+                </div>
+
                 <div class="wishlist__items"></div>
             </div>
         </section>
