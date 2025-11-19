@@ -323,6 +323,16 @@
         background-color: var(--copper);
     }
 
+    /* wish list items */
+    .wishlist__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(5rem,1fr));
+    }
+
+    .wish__img {
+        width: 5rem;
+    }
+
     @media (min-width: 48rem) {
         .nav__menu {
             position: relative;

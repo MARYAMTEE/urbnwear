@@ -68,27 +68,38 @@ function displayProducts(type) {
         </div>
         `).join("");
 
-    // wish button toggle
+    // Toggle wishlist button
     const wishBtn = document.querySelectorAll(".wish__btn");
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
     wishBtn.forEach(wBtn => {
+        const productId = wBtn.dataset.id;
+        const icon = wBtn.querySelector("i");
+        // Set initial icon state
+        if(wishlist.includes(productId)) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+        } else {
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular");
+        }
+
+        // Toggle on click
         wBtn.addEventListener("click", () => {
-            const productId = wBtn.dataset.id;
             updateWishlist(productId);
-            const icon = wBtn.querySelector("i");
 
             icon.classList.toggle("fa-regular");
             icon.classList.toggle("fa-solid");
-
+            
             displayWishList(productsData);
-        });
+        })
     });
 }
 
 function updateWishlist(id) {
     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-    if(wishlist.includes(id)) {
+    if (wishlist.includes(id)) {
         wishlist = wishlist.filter(item => item !== id);
     } else {
         wishlist.push(id);
@@ -281,10 +292,32 @@ function displayWishList(productsData) {
 
     container.innerHTML = wished.map(product => `
         <div class="wishlist__mini">
-            <img src="${product.image}" alt="${product.name}">
+            <img src="${product.image}" class="wish__img" alt="${product.name}">
             <div>
                 <p>${product.name}</p>
             </div>
+
+            <button type="button" class="remove__wish" data-id="${product.id}" aria-label="Wish item close button">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
         </div>
         `).join("");
+
+    const removeBtns = container.querySelectorAll(".remove__wish");
+
+    removeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            removeWish(btn.dataset.id);
+        });
+    });
+}
+
+// Function to remove wishlist
+function removeWish(id) {
+    let list = JSON.parse(localStorage.getItem("wishlist")) || [];
+    list = list.filter(item => item !== id);
+
+    localStorage.setItem("wishlist", JSON.stringify(list));
+    displayWishList(productsData);
+    displayProducts("featured");
 }
