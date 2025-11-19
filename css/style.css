@@ -284,7 +284,7 @@
         height: 100%;
         background-color: var(--congo-brown);
         color: white;
-        padding-block: 1rem 6rem;
+        padding-block: 1rem 10rem;
         padding-inline: 1rem;
         text-align: center;
         overflow-y: auto;
@@ -326,11 +326,40 @@
     /* wish list items */
     .wishlist__items {
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(5rem,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(6rem,1fr));
+        align-items:flex-end;
+        gap: 1rem;
     }
 
+    .wishlist__mini {
+        position: relative;
+        background-color: white;
+    }
+
+    .remove__wish {
+        position: absolute;
+        top: 0;
+        left: 5px;
+    }
+    
     .wish__img {
-        width: 5rem;
+        width: 3rem;
+        margin-inline: auto;
+        object-fit: cover;
+    }
+
+    .wish__name {
+        color: var(--tamarind);
+    }
+
+    .wishProduct__name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1rem;
+        color: var(--tamarind);
+    }
+
+    .remove__icon {
+        color: var(--tamarind);
     }
 
     @media (min-width: 48rem) {

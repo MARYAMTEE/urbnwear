@@ -294,11 +294,11 @@ function displayWishList(productsData) {
         <div class="wishlist__mini">
             <img src="${product.image}" class="wish__img" alt="${product.name}">
             <div>
-                <p>${product.name}</p>
+                <p class="wishProduct__name">${product.name}</p>
             </div>
 
             <button type="button" class="remove__wish" data-id="${product.id}" aria-label="Wish item close button">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                <i class="fa-solid fa-xmark remove__icon" aria-hidden="true"></i>
             </button>
         </div>
         `).join("");
