@@ -140,6 +140,7 @@
         padding: 0.5rem 1rem;
         background-color: var(--bronco);
         font-size: 0.75rem;
+        font-weight: 500;
         border-radius: 7px;
         cursor: pointer;
     }
@@ -313,16 +314,10 @@
         top: 0;
         background-color: transparent;
         cursor: pointer;
-        border: 1px solid black;
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
     }
 
     .wish__btn i {
-        font-size: 0.55rem;
+        font-size: 0.75rem;
     }
 
     .checkout__btn {

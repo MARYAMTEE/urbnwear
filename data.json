@@ -100,7 +100,7 @@
         "name": "Wrangler",
         "price": 50,
         "discount": 0.20,
-        "image":"./images/jean-4.jpg",
+        "image":"./images/jean-4.png",
         "type": ["featured"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -109,7 +109,7 @@
         "name": "Levi's",
         "price": 35,
         "discount": 0.20,
-        "image":"./images/jean-3.jpg",
+        "image":"./images/jean-3.png",
         "type": ["featured"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },

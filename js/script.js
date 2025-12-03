@@ -343,11 +343,11 @@ function displayDiscountProducts() {
         <div class="product border-1 border-[var(--copper)]">
             <div class="relative">
                 <img src="${product.image}" alt="${product.name}" class="product__img">
-
-                <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
-                    -${product.discount * 100}%
-                </span>
             </div>
+
+            <span class="absolute top-0 left-0 bg-red-600 text-white text-xs px-2 py-1 rounded">
+                -${product.discount * 100}%
+            </span>
 
             <div class="product__text">
                 <h4 class="product__title">${product.name}</h4>
