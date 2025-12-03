@@ -7,12 +7,15 @@
     .then(res => res.json())
     .then(productsData => {
         const product = productsData.find(p => p.id == productId);
+        const oldPrice = product.price;
+        const newPrice = (product.price - (product.price * product.discount)).toFixed(2);
 
         if(product) {
             document.querySelector(".detail__img").src = product.image;
             document.querySelector(".detail__name").textContent = product.name;
             document.querySelector(".detail__description").textContent = product.description;
             document.querySelector(".detail__price").textContent = `$${product.price}`;
+            document.querySelector(".discount__price").textContent = `$${newPrice}`;
             document.querySelector(".quantity__boxes").dataset.id = product.id;
             const cartBtn = document.querySelector(".cart__btn") ;
 
