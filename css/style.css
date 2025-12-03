@@ -303,7 +303,7 @@
 
     .cart__total {
         margin-block: 2rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     /* wish button */
@@ -313,14 +313,20 @@
         top: 0;
         background-color: transparent;
         cursor: pointer;
+        border: 1px solid black;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
     }
 
     .wish__btn i {
-        font-size: 0.75rem;
+        font-size: 0.55rem;
     }
 
     .checkout__btn {
-        border: 5px solid var(--copper);
+        border: 2px solid var(--copper);
         width: 100%;
         padding-block: 1rem;
         border-radius: 10px;
@@ -371,6 +377,11 @@
 
     .remove__icon {
         color: var(--congo-brown);
+    }
+
+    /* Discount section */
+    .discount__header {
+        font-family: "Cormorant Garamond", serif;;
     }
 
     @media (min-width: 48rem) {
@@ -463,5 +474,6 @@
     }
 }
 
-/* npx @tailwindcss/cli -i ./css/style.css -o ./css/output.css --watch
+/* 
+npx @tailwindcss/cli -i ./css/style.css -o ./css/output.css --watch
  */

@@ -46,11 +46,14 @@ if (productsContainer) {
 
             displayProducts("featured");
             displayWishList(productsData);
+
+            displayDiscountProducts();
         });
 }
 
 function displayProducts(type) {
-    const filtered = productsData.filter(p => p.type.includes(type));
+    const filtered = productsData.filter(p => p.type.includes(type) && (!p.discount || p.discount === 0)
+);
     productsContainer.innerHTML = filtered.map(product => `
         <div class="product">
             <div class="relative">
@@ -320,4 +323,40 @@ function removeWish(id) {
     localStorage.setItem("wishlist", JSON.stringify(list));
     displayWishList(productsData);
     displayProducts("featured");
+}
+
+// Discount section
+function displayDiscountProducts() {
+    const discountContainer = document.querySelector(".discount__products");
+
+    if (!discountContainer) return;
+
+    // pick only items that have discount
+    const discountedItems = productsData.filter(p => p.discount);
+
+    discountContainer.innerHTML = discountedItems.map(product => {
+
+        const oldPrice = product.price;
+        const newPrice = (product.price - (product.price * product.discount)).toFixed(2);
+
+        return `
+        <div class="product border-1 border-[var(--copper)]">
+            <div class="relative">
+                <img src="${product.image}" alt="${product.name}" class="product__img">
+
+                <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
+                    -${product.discount * 100}%
+                </span>
+            </div>
+
+            <div class="product__text">
+                <h4 class="product__title">${product.name}</h4>
+                <p class="line-through text-gray-400">$${oldPrice}</p>
+                <p class="text-red-600 font-bold">$${newPrice}</p>
+                <button type="button" onclick="openProductPage('${product.id}')" class="product__btn">View Details</button>
+            </div>
+
+        </div>
+        `;
+    }).join("");
 }
