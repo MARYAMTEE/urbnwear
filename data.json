@@ -130,5 +130,165 @@
         "image":"./images/jean-2.jpg",
         "type": ["featured"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 17,
+        "name": "Workday Perfect",
+        "price": 90,
+        "image":"./images/trendy-casual-1.jpg",
+        "type": ["all", "casual", "office"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 18,
+        "name": "Chic Statement Trio",
+        "price": 105,
+        "image":"./images/trendy-chic-1.jpg",
+        "type": ["all", "chic and classy"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 19,
+        "name": "City Chic",
+        "price": 105,
+        "image":"./images/trendy-street-3.png",
+        "type": ["all", "street", "casual"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 20,
+        "name": "Glam & Go",
+        "price": 585,
+        "image":"./images/trendy-chic-4.png",
+        "type": ["all", "chic and classy", "casual"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 21,
+        "name": "Classy Rebel",
+        "price": 109,
+        "image":"./images/trendy-chic-5.png",
+        "type": ["all", "chic and classy"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 22,
+        "name": "Casual Glow",
+        "price": 110,
+        "image":"./images/trendy-chic-6.png",
+        "type": ["all", "chic and classy", "casual"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 23,
+        "name": "Sassy Set",
+        "price": 259,
+        "image":"./images/trendy-chic-7.png",
+        "type": ["all", "chic and classy", "office"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 24,
+        "name": "Lite Set",
+        "price": 320,
+        "image":"./images/trendy-chic-8.jpg",
+        "type": ["all", "chic and classy", "casual"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 25,
+        "name": "Fierce Fit",
+        "price": 305,
+        "image":"./images/trendy-chic-9.jpg",
+        "type": ["all", "chic and classy"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 26,
+        "name": "Work Chic",
+        "price": 280,
+        "image":"./images/trendy-office-1.jpg",
+        "type": ["all", "office"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 27,
+        "name": "Office Chic",
+        "price": 445,
+        "image":"./images/trendy-office-2.jpg",
+        "type": ["all", "office"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 28,
+        "name": "Pro Fit",
+        "price": 500,
+        "image":"./images/trendy-office-4.png",
+        "type": ["all", "office"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 29,
+        "name": "Work Set",
+        "price": 103,
+        "image":"./images/trendy-office-3.jpg",
+        "type": ["all", "office"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 30,
+        "name": "Pro Fit",
+        "price": 405,
+        "image":"./images/trendy-office-5.jpg",
+        "type": ["all", "office"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 31,
+        "name": "Classy Set",
+        "price": 405,
+        "image":"./images/trendy-office-6.png",
+        "type": ["all", "office", "chic and classy"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 32,
+        "name": "Soft Fit",
+        "price": 300,
+        "image":"./images/trendy-street-1.jpg",
+        "type": ["all", "street", "casual"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 33,
+        "name": "Chic Set",
+        "price": 459,
+        "image":"./images/trendy-street2.png",
+        "type": ["all", "chic and classy"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 34,
+        "name": "Fierce Femme",
+        "price": 95,
+        "image":"./images/trendy-chic-2.jpg",
+        "type": ["all", "chic and classy"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 35,
+        "name": "City Set",
+        "price": 405,
+        "image":"./images/trendy-street-4.png",
+        "type": ["all", "street"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
+    },
+    {
+        "id": 36,
+        "name": "Street Chic",
+        "price": 905,
+        "image":"./images/trendy-street-5.png",
+        "type": ["all", "street"],
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     }
 ]

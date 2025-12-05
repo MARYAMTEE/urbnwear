@@ -125,6 +125,7 @@
         width: 100%;
         font-size: 0.75rem;
         background-color: var(--light-antique);
+        color: var(--black);
         padding-top: 0.5rem;
     }
 
@@ -375,9 +376,25 @@
     }
 
     /* Discount section */
-    .discount__header {
+    .discount__header,
+    .trendy__title {
         font-family: "Cormorant Garamond", serif;;
     }
+
+    /* Trendy section */
+    .hidden-set {
+        display: none;
+    }
+
+    .trendy__img {
+        width: 13rem;
+        max-height: 13rem;
+        object-fit: contain;
+        object-position: center;
+        margin-inline: auto;
+        background-color: white;
+    }
+
 
     @media (min-width: 48rem) {
         .nav__menu {

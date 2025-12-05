@@ -48,6 +48,7 @@ if (productsContainer) {
             displayWishList(productsData);
 
             displayDiscountProducts();
+            displayTrendies("all");
         });
 }
 
@@ -154,7 +155,6 @@ const closeCart = document.querySelector(".close__cart");
             cartContainer.classList.add("hidden");
         });
     }
-
 
 // Load Cart items 
 function loadCartItems() {
@@ -360,3 +360,47 @@ function displayDiscountProducts() {
         `;
     }).join("");
 }
+
+// Trendy Section
+const trendyContainer = document.querySelector(".trending__products");
+const viewMoreBtn = document.querySelector(".viewMore__btn");
+let visibleCount = 4;
+
+// Display Products
+function displayTrendies(type = "all") {
+    let filtered;
+
+    if (type === "all") {
+        filtered = productsData.filter(p => p.type.includes("all"));
+    } else {
+        filtered = productsData.filter(p => p.type.includes(type));
+    }
+    
+
+    trendyContainer.innerHTML = filtered.map((product, index) => `
+        <div class="trendy__set border border-gray-300 rounded-md text-center ${index >= visibleCount ? 'hidden-set' : ''}">
+            <img class="trendy__img" src="${product.image}" alt="${product.name}">
+
+            <div class="product__text py-8">
+                <h3 class="product__title text-lg">${product.name}</h3>
+                <p class="product__price text-lg mt-2 mb-4">$${product.price}</p>
+                <button type="button" onclick="openProductPage('${product.id}')" class="product__btn">View Details</button>
+            </div>
+        </div>
+    `).join('');
+
+    viewMoreBtn.style.display = filtered.length > visibleCount ? "inline-block" : "none";
+}
+
+viewMoreBtn.addEventListener("click", () => {
+    visibleCount = Infinity;
+    const currentFilter = trendyFilter.value;
+    displayTrendies(currentFilter);
+})
+
+const trendyFilter = document.getElementById("trendy__filter");
+
+trendyFilter.addEventListener("change", (e) => {
+    visibleCount = 4;
+    displayTrendies(e.target.value);
+})
