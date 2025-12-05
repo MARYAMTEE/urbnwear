@@ -19,19 +19,19 @@
 <body>
     <header class="sticky top-0 z-50 py-8 bg-white shadow-md md:py-0">
         <div class="logo__container flex justify-between items-center px-4 md:hidden">
-            <button type="button" class="open__menu inline-block text-2xl" aria-label="open menu">
+            <button type="button" class="open__menu inline-block text-2xl text-[var(--tamarind)]" aria-label="open menu">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
             
-            <h1 class="logo text-3xl font-semibold">URBNWEAR</h1>
+            <h1 class="logo text-3xl font-semibold text-[var(--tamarind)]">URBNWEAR</h1>
 
             <div class="shopping__icon flex gap-4">
-                <button type="button" class="wish__list text-xl" aria-label="Wish List">
+                <button type="button" class="wish__list text-xl text-[var(--tamarind)]" aria-label="Wish List">
                     <i class="fa-regular fa-user"></i>
                 </button>
                 
                 <div class="cart__icon-container relative inline-block cursor-pointer">
-                    <button type="button" class="shopping text-xl" aria-label="Shopping Icon">
+                    <button type="button" class="shopping text-xl text-[var(--tamarind)]" aria-label="Shopping Icon">
                         <i class="fa-solid fa-cart-shopping shopping" aria-hidden="true"></i>
                     </button>
                     <span class="item__count hidden absolute top-0 left-1/2 -translate-x-1/2 border-2 border-[var(--copper)] rounded-lg w-4 h-4 z-10 bg-[var(--copper)] text-white flex items-center justify-center text-xs">0</span>
@@ -45,7 +45,7 @@
                     <i class="fa-solid fa-xmark close" aria-hidden="true"></i>
                 </button>
     
-                <h1 class="logo logo--mobile text-3xl font-semibold md:pt-6">URBNWEAR</h1>
+                <h1 class="logo logo--mobile text-3xl font-semibold md:pt-6 text-[var(--tamarind)]">URBNWEAR</h1>
             </div>
 
             <ul class="nav__list text-center font-medium py-8 uppercase md:pt-8 md:pb-4">
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="auth__container text-center flex flex-col items-center gap-10 md:bg-[var(--transparent-tamarind)] md:absolute md:top-0 md:left-0 md:right-0 md:flex-row-reverse md:w-full md:justify-flex-end md:text-sm md:px-4 md:py-2">
+            <div class="auth__container text-center flex flex-col items-center gap-10 md:bg-[hsl(0, 8%, 83%)] md:absolute md:top-0 md:left-0 md:right-0 md:flex-row-reverse md:w-full md:justify-flex-end md:text-sm md:px-4 md:py-2">
                 <ul  class="login__details flex flex-col gap-6 md:flex-row md:gap-2">
                     <li class="login__item"><a href="#" class="log__in">Log in</a></li>
                     <li class="login__item"><a href="#">Create account</a></li>
@@ -108,9 +108,11 @@
 
             <!-- text container -->
             <div class="banner__right m-auto w-full h-full flex flex-col px-4 max-w-[25rem] md:m-0 md:items-start md:text-left md:px-16 lg:mb-24 md:max-w-full z-10">
-                <h1 class="banner__title text-3xl font-semibold mb-2 leading-8 uppercase md:text-4xl md:leading-12 md:max-w-[29rem]">Redefine Your Style with Confidence</h1>
-                <p class="banner__text mb-6 w-full md:max-w-[25rem]">Create amazing experiences with clean and modern design.</p>
-                <button class="w-auto border-1 bg-[var(--bronco)] text-white rounded-lg py-4 px-6 uppercase tracking-widest shadow-[0_4px_10px_0_var(--copper)] transform transition duration-300 hover:-translate-y-2">Explore Collection</button>
+                 <h1 class="banner__title text-3xl font-semibold mb-2 leading-8 uppercase md:text-4xl md:leading-12 md:max-w-[29rem]">Redefine Your Style with Confidence</h1>
+                 <p class="banner__text mt-2 mb-4 w-full md:max-w-[25rem]">Create amazing experiences with clean and modern design.</p>
+                 <div class="mt-6">
+                     <a href="#" class="border-1 bg-[transparent] text-white rounded-lg py-4 px-6 uppercase tracking-widest shadow-[0_4px_10px_0_var(--copper)] transform transition duration-300 hover:-translate-y-2">Explore Collection</a>
+                 </div>
             </div>
 
             <div class="image__gallery">
@@ -222,7 +224,7 @@
             <div class="trendy__header flex justify-between items-center"> 
                 <h2 class="trendy__title text-2xl font-bold my-6 md:text-3xl md:my-12 uppercase">Trendy/Hot Pick</h2>
 
-                <select id="trendy__filter" class="border-1 text-sm">
+                <select id="trendy__filter" class="trendy__filter border-1 text-sm px-2">
                     <option value="all" class="trendy__option">All</option>
                     <option value="office" class="trendy__option">Office Set</option>
                     <option value="chic and classy" class="trendy__option">Chic & Classy</option>

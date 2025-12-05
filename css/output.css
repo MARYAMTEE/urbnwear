@@ -254,6 +254,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
@@ -265,9 +268,6 @@
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
-  }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
   }
   .mb-px {
     margin-bottom: 1px;
@@ -408,11 +408,11 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .bg-\[transparent\] {
+    background-color: transparent;
+  }
   .bg-\[var\(--antique-brass\)\] {
     background-color: var(--antique-brass);
-  }
-  .bg-\[var\(--bronco\)\] {
-    background-color: var(--bronco);
   }
   .bg-\[var\(--copper\)\] {
     background-color: var(--copper);
@@ -521,6 +521,9 @@
   .tracking-widest {
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
+  }
+  .text-\[var\(--black\)\] {
+    color: var(--black);
   }
   .text-\[var\(--tamarind\)\] {
     color: var(--tamarind);
@@ -1059,10 +1062,16 @@
     font-size: 1.5rem;
   }
   .wish__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     right: 0;
     top: 0;
-    background-color: transparent;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: hsl(0, 10%, 88%);
     cursor: pointer;
   }
   .wish__btn i {

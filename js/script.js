@@ -67,7 +67,7 @@ function displayProducts(type) {
             </div>
 
             <button type="button" aria-label="wish icon" class="wish__btn" data-id="${product.id}">
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-heart text-[var(--black)]"></i>
                 </button>
         </div>
         `).join("");
@@ -383,7 +383,7 @@ function displayTrendies(type = "all") {
 
             <div class="product__text py-8">
                 <h3 class="product__title text-lg">${product.name}</h3>
-                <p class="product__price text-lg mt-2 mb-4">$${product.price}</p>
+                <p class="product__price text-lg font-semibold mt-2 mb-4">$${product.price}</p>
                 <button type="button" onclick="openProductPage('${product.id}')" class="product__btn">View Details</button>
             </div>
         </div>

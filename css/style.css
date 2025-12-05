@@ -310,10 +310,17 @@
 
     /* wish button */
     .wish__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         right: 0;
         top: 0;
-        background-color: transparent;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: hsl(0, 10%, 88%);
+;
         cursor: pointer;
     }
 
@@ -394,7 +401,6 @@
         margin-inline: auto;
         background-color: white;
     }
-
 
     @media (min-width: 48rem) {
         .nav__menu {
