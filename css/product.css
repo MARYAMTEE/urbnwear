@@ -103,6 +103,22 @@ body{
     font-size: 1.5rem;
 }
 
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.discount__price {
+    text-decoration: line-through;
+    background-color: hsl(0, 10%, 88%);
+    color: hsl(0, 72%, 51%);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+
+
 @media (min-width: 48rem) {
     body {
         height: 100vh;

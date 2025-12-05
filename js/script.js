@@ -391,16 +391,18 @@ function displayTrendies(type = "all") {
 
     viewMoreBtn.style.display = filtered.length > visibleCount ? "inline-block" : "none";
 }
-
-viewMoreBtn.addEventListener("click", () => {
-    visibleCount = Infinity;
-    const currentFilter = trendyFilter.value;
-    displayTrendies(currentFilter);
-})
+if (viewMoreBtn) {
+    viewMoreBtn.addEventListener("click", () => {
+        visibleCount = Infinity;
+        const currentFilter = trendyFilter.value;
+        displayTrendies(currentFilter);
+    })
+}
 
 const trendyFilter = document.getElementById("trendy__filter");
-
-trendyFilter.addEventListener("change", (e) => {
-    visibleCount = 4;
-    displayTrendies(e.target.value);
-})
+if (trendyFilter) {
+    trendyFilter.addEventListener("change", (e) => {
+        visibleCount = 4;
+        displayTrendies(e.target.value);
+    })
+}

@@ -123,5 +123,3 @@
         localStorage.setItem("cart", JSON.stringify(cart));
         alert(`${product.name} added to your cart!`);
     }
-
-    
