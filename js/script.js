@@ -20,6 +20,8 @@ closeMenu.addEventListener("click", () => {
 
 navList.forEach((list, index) => {
     list.addEventListener("click", () => {
+        navLink[index].click();
+        
         navList.forEach(l => l.classList.remove("active"));
         list.classList.add("active");
 

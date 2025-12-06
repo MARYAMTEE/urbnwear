@@ -51,7 +51,7 @@
             <ul class="nav__list text-center font-medium py-8 uppercase md:pt-8 md:pb-4">
                 <li class="nav__item active"><a href="#" class="nav__link active">Home</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
+                <li class="nav__item"><a href="#products" class="nav__link">Products</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Journal</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
             </ul>
@@ -109,7 +109,7 @@
             <!-- text container -->
             <div class="banner__right m-auto w-full h-full flex flex-col px-4 max-w-[25rem] md:m-0 md:items-start md:text-left md:px-16 lg:mb-24 md:max-w-full z-10">
                  <h1 class="banner__title text-3xl font-semibold mb-2 leading-8 uppercase md:text-4xl md:leading-12 md:max-w-[29rem]">Redefine Your Style with Confidence</h1>
-                 <p class="banner__text mt-2 mb-4 w-full md:max-w-[25rem]">Create amazing experiences with clean and modern design.</p>
+                 <p class="banner__text mt-2 mb-4 w-full md:max-w-[25rem]">Style made easy. Shop your new favorites..</p>
                  <div class="mt-6">
                      <a href="#" class="border-1 bg-[transparent] text-white rounded-lg py-4 px-6 uppercase tracking-widest shadow-[0_4px_10px_0_var(--copper)] transform transition duration-300 hover:-translate-y-2">Explore Collection</a>
                  </div>
@@ -164,7 +164,7 @@
         </section>
 
         <!-- Tab section -->
-        <section class="clothing__shop">
+        <section class="clothing__shop" id="products">
             <div class="shop__products px-4">
                 <!-- Tabs -->
                 <div class="tabs flex items-center justify-between mt-16 px-2 bg-[var(--light-antique)] md:justify-center md:gap-10">
@@ -222,7 +222,7 @@
 
         <section class="trendy__clothing p-8 max-w-[48rem] m-auto">
             <div class="trendy__header flex justify-between items-center"> 
-                <h2 class="trendy__title text-2xl font-bold my-6 md:text-3xl md:my-12 uppercase">Trendy/Hot Pick</h2>
+                <h2 class="trendy__title text-2xl font-bold my-6 md:text-3xl md:my-12 uppercase">Trendy Set</h2>
 
                 <div class="">
                     
@@ -243,5 +243,67 @@
             </div>
         </section>
     </main>
+
+    <footer class="clothing__footer bg-[var(--tamarind)] text-white text-sm py-12 px-4">
+        <section class="footer__section flex flex-col gap-4 justify-between md:flex-row">
+            <div class="grid__one flex flex-col flex-1 gap-y-4">
+                <div class="">
+                    <h1 class="footer__logo text-3xl font-semibold">URBNWEAR</h1>
+                </div>
+
+                <div class="footer__about">
+                    <p class="footer__text">
+                        Discover trendy, affordable fashion made to elevate your everyday style. Shop outfits that keep you looking confident, chic, and effortlessly you
+                    </p>
+                </div>
+
+                <div class="footer__socials">
+                    <ul class="socials__list flex items-center gap-4">
+                        <li class="socials__item flex items-center justify-center">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f text-[#1877F2]"></i>
+                            </a>
+                        </li>
+                        <li class="socials__item flex items-center justify-center">
+                            <a href="#">
+                                <i class="fa-brands fa-instagram instagram__icon"></i>
+                            </a>
+                        </li>
+                        <li class="socials__item flex items-center justify-center">
+                            <a href="#">
+                                <i class="fa-brands fa-pinterest text-[#E60023]"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid__two flex-1">
+                <div class="footer__title">
+                    <h1 class="footer__header text-xl font-semibold">Extra Links</h1>
+
+                    <div class="footer__nav">
+                        <nav class="footer__menu">
+                            <ul class="footer__list flex flex-col gap-y-4">
+                                <li class="footer__item"><a class="footer__link" href="#">Home</a></li>
+                                <li class="footer__item"><a class="footer__link" href="#">About</a></li>
+                                <li class="footer__item"><a class="footer__link" href="#">Products</a></li>
+                                <li class="footer__item"><a class="footer__link" href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__three flex-1">
+                <h1 class="footer__header">Contact</h1>
+                <div class="footer__title flex flex-col gap-y-4">
+                    <p class="address text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas</p>
+                    <p class="email">urbanwears@gmail.com</p>
+                    <p>+121-234-566-78</p>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

@@ -27,7 +27,9 @@
         position: relative;
     }
 
-    .logo {
+    .logo,
+    .footer__logo,
+    .footer__header {
         font-family: "Cormorant Garamond", serif;
         letter-spacing: 0.05em;
     }
@@ -71,8 +73,7 @@
         font-weight: 600;
     }
 
-    .nav__link.active,
-    .nav__link:hover{
+    .nav__link.active{
         color: var(--copper);
     }
 
@@ -400,6 +401,31 @@
         object-position: center;
         margin-inline: auto;
         background-color: white;
+    }
+
+    /* Footer Socials */
+    .socials__item {
+        background-color: white;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+    }
+
+    .socials__item i {
+        font-size: 12px;
+    }
+
+    .instagram__icon {
+        background: linear-gradient(45deg,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4);
+    }
+
+    .footer__header {
+        font-size: 1.5rem;
+        margin-block-end: 1.5rem;
+    }
+
+    .footer__link {
+        color: white;
     }
 
     @media (min-width: 48rem) {
