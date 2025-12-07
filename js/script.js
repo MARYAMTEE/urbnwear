@@ -240,7 +240,7 @@ function loadCartItems() {
 function showSuccessMsg(message) {
     const msg = document.createElement("div");
     msg.textContent = message;
-    msg.className = `fixed top-5 left-1/2 bg-[var(--antique-brass)] text-[var(--tamarind)] px-4 py-2 rounded shadow-md transition-opacity duration-500 opacity-100 z-50 transform -translate-x-1/2`
+    msg.className = `fixed top-5 left-1/2 bg-[var(--copper)] text-[var(--tamarind)] px-4 py-2 rounded shadow-md transition-opacity duration-500 opacity-100 z-50 transform -translate-x-1/2`
     document.body.appendChild(msg);
 
     setTimeout(() => {

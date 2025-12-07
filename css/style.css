@@ -7,7 +7,6 @@
     --copper: hsl(27, 55%, 42%);
     --transparent-tamarind: hsla(5, 41%, 12%, 0.075);
 
-    --antique-brass: hsl(21, 53%, 59%);
     --light-antique: hsl(21, 53%, 59%, 0.089);
 
     --silver: hsl(217, 9%, 45%);
@@ -505,7 +504,7 @@
         .gallery__img{
             width: 80px;
             border-radius: 10px;
-            border: 1px solid var(--antique-brass);
+            border: 1px solid var(--copper);
         }
 
         .cart__container {
