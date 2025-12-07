@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="./css/output.css">
+    <!-- javaScript -->
+    <script src="./js/checkout.js" defer></script>
 </head>
 <body>
     <section class="checkout py-12 bg-gray-100 text-[var(--black)]">
@@ -73,29 +75,40 @@
             <!-- RIGHT SIDE: Order Summary -->
             <div>
                 <div class="bg-white p-6 rounded-xl shadow-md space-y-4">
-                    <h2 class="checkout__title text-2xl font-bold text-[var(--tamarind)]">Order Summary</h2>
+                    <h2 class="checkout__title text-2xl font-semibold">Order Summary</h2>
+
+                    <!-- ← Put the summary HTML here -->
+                    <div class="checkout-order-summary space-y-2">
+                    <!-- Cart items will be appended here -->
+                    </div>
 
                     <div class="flex justify-between text-sm border-b pb-2">
                         <span>Subtotal</span>
-                        <span>$120.00</span>
+                        <span id="subtotal">$0.00</span>
                     </div>
 
                     <div class="flex justify-between text-sm border-b pb-2">
                         <span>Shipping Fee</span>
-                        <span>$10.00</span>
+                        <span id="shipping">$0.00</span>
                     </div>
 
                     <div class="flex justify-between text-base font-semibold">
                         <span>Total</span>
-                        <span>$130.00</span>
+                        <span id="total">$0.00</span>
                     </div>
 
-                    <button class="w-full bg-transparent text-[var(--tamarind)] shadow-[0_4px_10px_0_var(--copper)] py-3 rounded-lg transform transition-color duration-500 hover:-translate-y-2 hover:bg-[var(--tamarind)] hover:text-white">
+                    <button class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-900 transition">
                         Place Order
                     </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <a href="index.html" class="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300 inline-block">
+        Return to Main Page
+    </a>
+
+
 </body>
 </html>

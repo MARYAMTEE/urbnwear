@@ -236,6 +236,22 @@ function loadCartItems() {
     totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
 };
 
+const checkoutBtn = document.querySelector(".checkout__btn");
+
+if (checkoutBtn) {
+  checkoutBtn.addEventListener("click", () => {
+    // Get the current cart
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Save cart (optional, already in localStorage)
+    localStorage.setItem("checkoutCart", JSON.stringify(cart));
+
+    // Redirect to checkout page
+    window.location.href = "checkout.html";
+  });
+}
+
+
 // Success message when product is added to the cart
 function showSuccessMsg(message) {
     const msg = document.createElement("div");
