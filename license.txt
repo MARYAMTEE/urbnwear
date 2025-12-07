@@ -1,0 +1,51 @@
+URBNWEAR E-Commerce Template  
+License: Personal & Commercial Use  
+Version: 1.0  
+Author: Ayorinde Maryam Oluwatoyin
+
+---------------------------------------
+PERMISSIONS
+---------------------------------------
+
+You are allowed to:
+
+1. Modify, edit, and customize this template.
+2. Use this template for personal or commercial projects.
+3. Replace all demo images, colors, fonts, and content with your own.
+4. Use the code in unlimited end-products for yourself or your clients.
+
+---------------------------------------
+RESTRICTIONS
+---------------------------------------
+
+You are NOT allowed to:
+
+1. Resell, redistribute, or share this template in its original or modified form.
+2. Claim ownership of the design or source code.
+3. Repackage or upload this template to any marketplace as your own product.
+4. Use the included demo images for any live or commercial project unless you
+   replace them with licensed or original images.
+
+---------------------------------------
+IMAGE & ASSET NOTICE
+---------------------------------------
+
+All images, icons, and mockups included in this template are for DEMONSTRATION 
+purposes only. They must be replaced with properly licensed or original assets 
+before using the template in a public or commercial website.
+
+The template author does not provide licenses for third-party assets.
+
+---------------------------------------
+DISCLAIMER
+---------------------------------------
+
+The template is provided “as-is” without warranty of any kind. The author shall 
+not be liable for any damages or legal issues arising from misuse.
+
+---------------------------------------
+COPYRIGHT
+---------------------------------------
+
+Copyright © 2025 Ayorinde Maryam Oluwatoyin.  
+All rights reserved.
