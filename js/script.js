@@ -408,3 +408,44 @@ if (trendyFilter) {
         displayTrendies(e.target.value);
     })
 }
+
+// Scrool animation
+function smoothScroll(target, duration = 1200) {
+  const start = window.pageYOffset;
+  const end = target.offsetTop;
+  const distance = end - start;
+  const startTime = performance.now();
+
+  function animateScroll(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    window.scrollTo(0, start + distance * progress);
+
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
+    }
+  }
+
+  requestAnimationFrame(animateScroll);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const href = this.getAttribute("href");
+
+    // Skip links that are just "#" (invalid)
+    if (href === "#" || href.trim() === "") return;
+
+    const target = document.querySelector(href);
+
+    // If the section does not exist, stop
+    if (!target) return;
+
+    // Smooth scroll
+    smoothScroll(target, 1200);
+  });
+});
+
