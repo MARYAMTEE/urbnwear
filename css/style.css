@@ -38,6 +38,15 @@
         display: none;
     }
 
+    section {
+        scroll-margin-top: 9.375rem;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
     .nav__menu{
         position: fixed;
         top: 0;
@@ -404,14 +413,20 @@
     }
 
     /* Footer Socials */
-    .socials__item {
+    .social__items {
         background-color: white;
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 50%;
+        display: inline-block;       
+        transition: transform 0.3s;
     }
 
-    .socials__item i {
+    .social__items:hover {
+        transform: translateY(-0.25rem); 
+    }
+
+    .social__items i {
         font-size: 12px;
     }
 
