@@ -2,7 +2,7 @@ const cart = JSON.parse(localStorage.getItem("checkoutCart")) || [];
 const shippingFee = 10; // fixed for now
 let subtotal = 0;
 
-const orderSummaryContainer = document.querySelector(".checkout-order-summary");
+const orderSummaryContainer = document.querySelector(".checkout__order--summary");
 
 cart.forEach(item => {
   subtotal += item.price * item.quantity;

@@ -463,8 +463,6 @@
         color: white;
     }
 
-    /* CHECKOUT PAGE */
-
     @media (min-width: 48rem) {
         .nav__menu {
             position: relative;
