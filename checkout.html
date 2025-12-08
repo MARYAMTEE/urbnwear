@@ -15,35 +15,35 @@
     <!-- javaScript -->
     <script src="./js/checkout.js" defer></script>
 </head>
-<body>
-    <section class="checkout py-12 bg-gray-100 text-[var(--black)]">
-        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8">
+<body class="min-h-screen w-full flex flex-col items-center justify-center">
+    <section class="checkout py-12 bg-gray-100 text-[var(--black)] w-full">
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             <!-- LEFT SIDE: Shipping + Payment -->
-            <div class="md:col-span-2 space-y-6">
+            <div class="col-span-2 space-y-6">
 
                 <!-- Shipping Information -->
                 <div class="bg-white p-6 rounded-xl shadow-md">
-                    <h2 class="checkout__title text-2xl font-bold mb-4 text-[var(--tamarind)]">Shipping Information</h2>
+                    <h2 class="checkout__title text-3xl font-bold mb-4 text-[var(--tamarind)]">Shipping Information</h2>
 
                     <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm mb-1">Full Name</label>
+                            <label class="block text-lg mb-1">Full Name</label>
                             <input type="text" class="w-full border rounded-lg p-2">
                         </div>
 
                         <div>
-                            <label class="block text-sm mb-1">Phone</label>
+                            <label class="block text-lg mb-1">Phone</label>
                             <input type="text" class="w-full border rounded-lg p-2">
                         </div>
 
                         <div class="md:col-span-2">
-                            <label class="block text-sm mb-1">Email Address</label>
+                            <label class="block text-lg mb-1">Email Address</label>
                             <input type="email" class="w-full border rounded-lg p-2">
                         </div>
 
                         <div class="md:col-span-2">
-                            <label class="block text-sm mb-1">Delivery Address</label>
+                            <label class="block text-lg mb-1">Delivery Address</label>
                             <input type="text" class="w-full border rounded-lg p-2">
                         </div>
                     </form>
@@ -51,7 +51,7 @@
 
                 <!-- Payment Method -->
                 <div class="bg-white p-6 rounded-xl shadow-md">
-                    <h2 class="checkout__title text-2xl font-bold mb-4 text-[var(--tamarind)]">Payment Method</h2>
+                    <h2 class="checkout__title text-3xl font-bold mb-4 text-[var(--tamarind)]">Payment Method</h2>
 
                     <div class="space-y-3">
                         <label class="flex items-center gap-3">
@@ -75,24 +75,24 @@
             <!-- RIGHT SIDE: Order Summary -->
             <div>
                 <div class="bg-white p-6 rounded-xl shadow-md space-y-4">
-                    <h2 class="checkout__title text-2xl font-semibold">Order Summary</h2>
+                    <h2 class="checkout__title text-3xl font-semibold">Order Summary</h2>
 
                     <!-- ← Put the summary HTML here -->
                     <div class="checkout-order-summary space-y-2">
                     <!-- Cart items will be appended here -->
                     </div>
 
-                    <div class="flex justify-between text-sm border-b pb-2">
+                    <div class="flex justify-between text-lg border-b pb-2">
                         <span>Subtotal</span>
                         <span id="subtotal">$0.00</span>
                     </div>
 
-                    <div class="flex justify-between text-sm border-b pb-2">
+                    <div class="flex justify-between text-lg border-b pb-2">
                         <span>Shipping Fee</span>
                         <span id="shipping">$0.00</span>
                     </div>
 
-                    <div class="flex justify-between text-base font-semibold">
+                    <div class="flex justify-between text-lg font-semibold">
                         <span>Total</span>
                         <span id="total">$0.00</span>
                     </div>
@@ -105,7 +105,7 @@
         </div>
     </section>
 
-    <a href="index.html" class="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300 inline-block">
+    <a href="index.html" class="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300 inline-block mt-22">
         Return to Main Page
     </a>
 
