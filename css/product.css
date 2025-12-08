@@ -27,7 +27,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-block-start: 3rem;
+    margin-block: 3rem;
     width: 100%;
     max-width: 30rem;
     margin-inline: auto;
@@ -121,7 +121,7 @@ body{
 
 @media (min-width: 48rem) {
     body {
-        height: 100vh;
+        min-height: 100%;
     }
     
     .product__details {
