@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Pure Comfort",
         "price": 45,
-        "image":"./images/bralet-2.jpg",
+        "image":"./images/polo-1.png",
         "type": ["featured", "best seller"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "name": "Glow Ribbed",
         "price": 45,
-        "image":"./images/harmless-croptop-1.png",
+        "image":"./images/shirt-1.png",
         "type":["featured", "best seller"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "name": "Aura Crop",
         "price": 45,
-        "image":"./images/croptop-1.png",
+        "image":"./images/polo-5.png",
         "type": ["featured", "new arrival"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "name": "Luxe Wrap",
         "price": 45,
-        "image":"./images/long-pindown-3.png",
+        "image":"./images/dress-2.png",
         "type": ["featured", "new arrival"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "name": "Cloud Top",
         "price": 45,
-        "image":"./images/croppedtop-3.jpg",
+        "image":"./images/polo-7.png",
         "type": ["featured", "best seller"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "name": "Sway Tank",
         "price": 45,
-        "image":"./images/bralet-3.png",
+        "image":"./images/polo-8.png",
         "type": ["featured", "best seller"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "name": "Bold Tee",
         "price": 45,
-        "image":"./images/long-pindown-2.png",
+        "image":"./images/polo-6.png",
         "type": ["featured", "new arrival"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "name": "Ella Knit",
         "price": 45,
-        "image":"./images/pindown-4.jpg",
+        "image":"./images/polo-9.png",
         "type": ["featured", "new arrival"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "name": "Ella Knit",
         "price": 45,
-        "image":"./images/sweatshirt.png",
+        "image":"./images/singlet-1.png",
         "type": ["featured", "best seller"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
@@ -75,28 +75,12 @@
         "id": 10,
         "name": "Bold Tee",
         "price": 45,
-        "image":"./images/long-pindown-2.png",
+        "image":"./images/polo-2.png",
         "type": ["featured", "best seller"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
         "id": 11,
-        "name": "Muse Shirt",
-        "price": 45,
-        "image":"./images/sweatshirt-2.png",
-        "type": ["featured", "new arrival"],
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
-    },
-    {
-        "id": 12,
-        "name": "Grace Top",
-        "price": 45,
-        "image":"./images/long-pindown-1.png",
-        "type": ["featured", "best seller"],
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
-    },
-    {
-        "id": 13,
         "name": "Wrangler",
         "price": 50,
         "discount": 0.20,
@@ -105,7 +89,7 @@
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
-        "id": 14,
+        "id": 12,
         "name": "Levi's",
         "price": 35,
         "discount": 0.20,
@@ -114,25 +98,25 @@
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
-        "id": 15,
+        "id": 13,
         "name": "Pepe Jean",
         "price": 105,
         "discount": 0.20,
-        "image":"./images/jean-1.jpg",
+        "image":"./images/jean-1.png",
         "type": ["featured"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
-        "id": 16,
+        "id": 14,
         "name": "Lee",
         "price": 7,
         "discount": 0.20,
-        "image":"./images/jean-2.jpg",
+        "image":"./images/jean-2.png",
         "type": ["featured"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
-        "id": 17,
+        "id": 15,
         "name": "Workday Perfect",
         "price": 90,
         "image":"./images/trendy-casual-1.jpg",
@@ -140,7 +124,7 @@
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
-        "id": 18,
+        "id": 16,
         "name": "Chic Statement Trio",
         "price": 105,
         "image":"./images/trendy-chic-1.jpg",

@@ -87,9 +87,13 @@ body{
 
 .control__btn,
 .cart__btn {
-    background-color: var(--congo-brown);
+    background-color: var(--tamarind);
     padding: 1rem 2rem;
     color: white;
+    font-size: 1.5rem;
+}
+
+.control__icon {
     font-size: 1.5rem;
 }
 
@@ -101,6 +105,7 @@ body{
 .display__quantity {
     color: var(--congo-brown);
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .prices {
