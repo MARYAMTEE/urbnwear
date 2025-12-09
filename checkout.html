@@ -18,6 +18,7 @@
 
     <!-- javaScript -->
     <script src="./js/checkout.js" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <header class="sticky top-0 z-50 py-8 bg-white shadow-md md:py-0">
@@ -108,28 +109,28 @@
         <div class="container w-full m-auto relative px-6 rounded-sm grid grid-cols-1 lg:grid-cols-3 items-start gap-12">
 
             <div class="col-span-2 space-y-12">
-                <div class="bg-white py-10 px-6 rounded-xl shadow-md [--tw-shadow-color:var(--tamarind)]">
+                <div class="bg-white mb-12 py-10 px-6 rounded-xl shadow-md [--tw-shadow-color:var(--tamarind)] lg:mb-0">
                     <h2 class="checkout__title text-[1.8rem] font-bold mb-4 text-[var(--tamarind)]">Shipping Information</h2>
 
                     <form action="" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         <div class="col-span-2 md:col-span-1">
-                            <label for="" class="block text-lg mb-2">Full Name</label>
-                            <input type="text" class="w-full border rounded-lg p-2">
+                            <label for="name" class="block text-lg mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full border rounded-lg p-2" autocomplete="name">
                         </div>
 
                         <div class="col-span-2 md:col-span-1">
-                            <label for="" class="block text-lg mb-2">Phone</label>
-                            <input type="text" class="w-full border rounded-lg p-2">
+                            <label for="phone" class="block text-lg mb-2">Phone</label>
+                            <input type="text" id="phone" class="w-full border rounded-lg p-2" autocomplete="tel">
                         </div>
 
                         <div class="col-span-2">
-                            <label for="" class="block text-lg mb-2">Email Address</label>
-                            <input type="text" class="w-full border rounded-lg p-2">
+                            <label for="email" class="block text-lg mb-2">Email Address</label>
+                            <input type="text" id="email" class="w-full border rounded-lg p-2" autocomplete="email">
                         </div>
 
                         <div class="col-span-2">
-                            <label for="" class="block text-lg mb-2">Delivery Address</label>
-                            <input type="text" class="w-full border rounded-lg p-2">
+                            <label for="Delivery" class="block text-lg mb-2">Delivery Address</label>
+                            <input type="text" id="delivery" class="w-full border rounded-lg p-2">
                         </div>
                     </form>
                 </div>
@@ -138,12 +139,12 @@
                     <h2 class="checkout__title text-[1.8rem] font-bold mb-4 text-[var(--tamarind)]">Payment Method</h2>
 
                     <div class="space-y-3">
-                        <label class="flex items-center gap-3">
-                            <input type="radio" name="payment" class="accent-black">
+                        <label class="flex items-center gap-3" for="delivery">
+                            <input type="radio" id="delivery" name="payment" class="accent-black">
                             <span>Pay on Delivery</span>
                         </label>
 
-                        <label class="flex items-center gap-3">
+                        <label class="flex  items-center gap-3">
                             <input type="radio" name="payment" class="accent-black">
                             <span>Card Payment</span>
                         </label>
@@ -188,7 +189,7 @@
             </div>
         </div>
 
-        <a href="index.html" class="bg-gray-100 p-4 rounded hover:bg-gray-100 inline-block ml-12 mt-12 rounded">
+        <a href="index.html" class="bg-white border-2 border-[var(--tamarind)] py-2 px-4 rounded hover:bg-gray-100 inline-block ml-8 mt-12 rounded">
             Return to Main Page
         </a>
     </main>

@@ -1,4 +1,4 @@
-const openMenu = document.querySelector(".open__menu");
+const openMenu = document.querySelectorAll(".open__menu");
 const closeMenu = document.querySelector(".close__menu");
 const navMenu = document.querySelector(".nav__menu");
 const navList = document.querySelectorAll(".nav__item");
@@ -6,11 +6,13 @@ const navLink = document.querySelectorAll(".nav__link");
 const logoText = document.querySelector(".logo__container");
 const overlay = document.querySelector(".overlay");
 
-openMenu.addEventListener("click", () => {
-    navMenu.classList.toggle("toggle");
-    logoText.classList.add("hidden");
-    overlay.classList.add("active");
-});
+openMenu.forEach(menu => {
+    menu.addEventListener("click", () => {
+        navMenu.classList.toggle("toggle");
+        logoText.classList.add("hidden");
+        overlay.classList.add("active");
+    });
+})
 
 closeMenu.addEventListener("click", () => {
     navMenu.classList.remove("toggle");
