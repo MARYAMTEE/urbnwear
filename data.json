@@ -120,7 +120,7 @@
         "name": "Star Cap",
         "price": 90,
         "image":"./images/face-cap-3.png",
-        "type": ["all", "jewery-accessories", "face-cap"],
+        "type": ["all", "face-cap"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
@@ -136,7 +136,7 @@
         "name": "Sling Bag",
         "price": 105,
         "image":"./images/bag-2.png",
-        "type": ["all", "shoe-bag", "jewery-accessories"],
+        "type": ["all", "shoe-bag"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
@@ -160,7 +160,7 @@
         "name": "Visor",
         "price": 110,
         "image":"./images/face-cap-1.png",
-        "type": ["all", "face-cap", "jewery-accessories"],
+        "type": ["all", "face-cap"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
@@ -168,7 +168,7 @@
         "name": "Satchel",
         "price": 259,
         "image":"./images/bag-4.png",
-        "type": ["all", "shoe-bag", "jewery-accessories"],
+        "type": ["all", "shoe-bag"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
@@ -176,7 +176,7 @@
         "name": "City Bag",
         "price": 320,
         "image":"./images/bag-3.png",
-        "type": ["all", "shoe-bag", "jewery-accessories"],
+        "type": ["all", "shoe-bag"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
@@ -192,7 +192,7 @@
         "name": "Chic Bag",
         "price": 445,
         "image":"./images/bag-1.png",
-        "type": ["all", "shoe-bag", "jewery-accessories"],
+        "type": ["all", "shoe-bag"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
@@ -200,7 +200,7 @@
         "name": "Pro Fit",
         "price": 500,
         "image":"./images/shoes-2.png",
-        "type": ["all", "shoe-bag", "jewery-accessories"],
+        "type": ["all", "shoe-bag"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     },
     {
@@ -208,7 +208,7 @@
         "name": "Classic Kicks",
         "price": 500,
         "image":"./images/shoes-4.png",
-        "type": ["all", "shoe-bag", "jewery-accessories"],
+        "type": ["all", "shoe-bag"],
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est rerum itaque cupiditate ducimus officia voluptatum libero harum id incidunt repellat! Saepe dignissimos vel sequi"
     }
 ]

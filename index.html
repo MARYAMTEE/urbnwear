@@ -26,12 +26,12 @@
             <h1 class="logo text-3xl font-semibold text-[var(--tamarind)]">URBNWEAR</h1>
 
             <div class="shopping__icon flex gap-4">
-                <button type="button" class="wish__list text-xl text-[var(--tamarind)]" aria-label="Wish List">
-                    <i class="fa-regular fa-user"></i>
+                <button type="button" class="wish__list text-lg text-[var(--tamarind)]" aria-label="Wish List">
+                    <i class="fa-regular fa-user wish"></i>
                 </button>
                 
                 <div class="cart__icon-container relative inline-block cursor-pointer">
-                    <button type="button" class="shopping text-xl text-[var(--tamarind)]" aria-label="Shopping Icon">
+                    <button type="button" class="shopping text-lg text-[var(--tamarind)]" aria-label="Shopping Icon">
                         <i class="fa-solid fa-cart-shopping shopping" aria-hidden="true"></i>
                     </button>
                     <span class="item__count hidden absolute top-0 left-1/2 -translate-x-1/2 border-2 border-[var(--copper)] rounded-lg w-4 h-4 z-10 bg-[var(--copper)] text-white flex items-center justify-center text-xs">0</span>
@@ -224,18 +224,15 @@
             </div>
         </section>
 
+        <!-- Trending items section -->
         <section class="trendy__clothing p-8 max-w-[48rem] m-auto" id="trendy">
             <div class="trendy__header flex justify-between items-center"> 
-                <h2 class="trendy__title text-2xl font-bold my-6 md:text-3xl md:my-12 uppercase">Trendy Set</h2>
+                <h2 class="trendy__title text-xl font-bold my-6 md:text-3xl md:my-12 uppercase">Trendy Set</h2>
 
-                <div class="">
-                    
-                </div>
                 <select id="trendy__filter" class="trendy__filter border text-sm px-2">
                     <option value="all" class="trendy__option">All</option>
                     <option value="face-cap" class="trendy__option">Face Cap</option>
                     <option value="complete-outfit" class="trendy__option">Complete outfit</option>
-                    <option value="jewery-accessories" class="trendy__option">Jewery and accessories</option>
                     <option value="shoe-bag" class="trendy__option">Shoe and bag</option>
                 </select>
             </div>

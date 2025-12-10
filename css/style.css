@@ -13,6 +13,14 @@
     --black: hsl(0, 0%, 10%);
 }
 
+/* reduce animation and transition */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 @layer components {
     * {
         padding: 0;
@@ -412,6 +420,18 @@
         margin-inline: auto;
         background-color: white;
     }
+
+    .trendy__set {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .trendy__set.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 
     /* Footer Socials */
     .social__items {

@@ -385,6 +385,7 @@ function displayDiscountProducts() {
 const trendyContainer = document.querySelector(".trending__products");
 const viewMoreBtn = document.querySelector(".viewMore__btn");
 let visibleCount = 4;
+let isExpanded = false;
 
 // Display Products
 function displayTrendies(type = "all") {
@@ -409,23 +410,49 @@ function displayTrendies(type = "all") {
         </div>
     `).join('');
 
-    viewMoreBtn.style.display = filtered.length > visibleCount ? "inline-block" : "none";
+    // add animation
+    setTimeout(() => {
+    document.querySelectorAll(".trendy__set").forEach(item => {
+        item.classList.add("show");
+    });
+    }, 10);
+
+
+    if (filtered.length <= 4) {
+    viewMoreBtn.style.display = "none";
+}
+
 }
 if (viewMoreBtn) {
     viewMoreBtn.addEventListener("click", () => {
-        visibleCount = Infinity;
         const currentFilter = trendyFilter.value;
+
+        if (!isExpanded) {
+            // Expand (View More)
+            visibleCount = Infinity;
+            viewMoreBtn.textContent = "View Less";
+            isExpanded = true;
+        } else {
+            // Collapse (View Less)
+            visibleCount = 4;
+            viewMoreBtn.textContent = "View More";
+            isExpanded = false;
+        }
+
         displayTrendies(currentFilter);
-    })
+    });
 }
 
+
 const trendyFilter = document.getElementById("trendy__filter");
-if (trendyFilter) {
-    trendyFilter.addEventListener("change", (e) => {
-        visibleCount = 4;
-        displayTrendies(e.target.value);
-    })
-}
+trendyFilter.addEventListener("change", () => {
+    visibleCount = 4;
+    isExpanded = false;
+    viewMoreBtn.textContent = "View More";
+
+    const currentFilter = trendyFilter.value;
+    displayTrendies(currentFilter);
+});
 
 // Scrool animation
 function smoothScroll(target, duration = 1200) {
