@@ -62,7 +62,7 @@ function displayProducts(type) {
     productsContainer.innerHTML = filtered.map(product => `
         <div class="product">
             <div class="relative">
-                <img loading="lazy" decoding="async" loading="lazy" decoding="async"src="${product.image}" alt="${product.name}" class="product__img">
+                <img decoding="async" loading="lazy" src="${product.image}" alt="${product.name}" class="product__img">
             </div>
             <div class="product__text">
                 <h4 class="product__title">${product.name}</h4>
@@ -190,7 +190,7 @@ function loadCartItems() {
 
         itemEl.innerHTML = `
             <div class="item__details">
-                <img loading="lazy" decoding="async" loading="lazy" decoding="async"src="${item.image}" alt="${item.name}" class="item__image">
+                <img loading="lazy" decoding="async" src="${item.image}" alt="${item.name}" class="item__image">
                 <div>
                     <h4 class="item__price">${item.name}</h4>
                     <p class="item__quantity">$${item.price} x ${item.quantity}</p>
@@ -315,7 +315,7 @@ function displayWishList(productsData) {
 
     container.innerHTML = wished.map(product => `
         <div class="wishlist__mini">
-            <img loading="lazy" decoding="async" loading="lazy" decoding="async"src="${product.image}" class="wish__img" alt="${product.name}">
+            <img loading="lazy" decoding="async" src="${product.image}" class="wish__img" alt="${product.name}">
             <div>
                 <p class="wishProduct__name">${product.name}</p>
             </div>
@@ -362,7 +362,7 @@ function displayDiscountProducts() {
         return `
         <div class="product border-1 border-[var(--copper)]">
             <div class="relative">
-                <img loading="lazy" decoding="async" loading="lazy" decoding="async"loading="lazy" decoding="async"src="${product.image}" alt="${product.name}" class="product__img">
+                <img loading="lazy" decoding="async" src="${product.image}" alt="${product.name}" class="product__img">
             </div>
 
             <span class="absolute top-0 left-0 bg-red-600 text-white text-xs px-2 py-1 rounded">
@@ -400,7 +400,7 @@ function displayTrendies(type = "all") {
 
     trendyContainer.innerHTML = filtered.map((product, index) => `
         <div class="trendy__set border border-gray-300 rounded-md text-center ${index >= visibleCount ? 'hidden-set' : ''}">
-            <img loading="lazy" decoding="async" loading="lazy" decoding="async"class="trendy__img" src="${product.image}" alt="${product.name}">
+            <img loading="lazy" decoding="async" class="trendy__img" src="${product.image}" alt="${product.name}">
 
             <div class="product__text py-8">
                 <h3 class="product__title text-lg">${product.name}</h3>

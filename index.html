@@ -120,10 +120,10 @@
             </div>
 
             <div class="image__gallery">
-                <img src="./images/gallery-1.jpg" alt="gallery Image" class="gallery__img">
-                <img src="./images/gallery-2.jpg" alt="gallery Image" class="gallery__img">
-                <img src="./images/gallery-3.jpg" alt="gallery Image" class="gallery__img">
-                <img src="./images/gallery-4.jpg" alt="gallery Image" class="gallery__img">
+                <img loading="lazy" decoding="async" src="./images/gallery-1.jpg" alt="gallery Image" class="gallery__img">
+                <img loading="lazy" decoding="async" src="./images/gallery-2.jpg" alt="gallery Image" class="gallery__img">
+                <img loading="lazy" decoding="async" src="./images/gallery-3.jpg" alt="gallery Image" class="gallery__img">
+                <img loading="lazy" decoding="async" src="./images/gallery-4.jpg" alt="gallery Image" class="gallery__img">
             </div>
         </section>
         
@@ -182,6 +182,49 @@
             </div>
         </section>
 
+        <!-- About page section -->
+        <section class="container mx-auto px-4 py-12">
+            <h2 class="discount__header text-2xl text-center font-bold my-6 md:text-3xl md:my-12 uppercase">About</h2>
+
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:grid-rows-2">
+
+                <!-- Clothes (Large Feature Card) -->
+                <div class="bg-[var(--light-antique)] rounded-2xl overflow-hidden md:col-span-2 md:row-span-2">
+                    <img loading="lazy" decoding="async" src="./images/about-cloth.png" alt="Clothes" class="object-cover object-center w-full h-78">
+                    <div class="p-6 lg:p-8">
+                        <h2 class="text-3xl font-bold mb-3 text-center">Clothes</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                        Explore trendy outfits, premium streetwear, and everyday essentials designed for comfort and style.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bags -->
+                <div class="bg-[var(--light-antique)] rounded-2xl overflow-hidden">
+                    <img loading="lazy" decoding="async" src="./images/about-bag-2.png" alt="Clothes" class="object-cover object-center w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-center">Bags</h3>
+                        <p class="text-gray-600">
+                        Stylish handbags, backpacks, and crossbody bags to complete your look.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Shoes -->
+                <div class="bg-[var(--light-antique)] rounded-2xl overflow-hidden">
+                    <img loading="lazy" decoding="async" src="./images/about-shoe-1.png" alt="Clothes" class="object-cover object-center h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-center">Shoes</h3>
+                        <p class="text-gray-600">
+                        Step out confidently with premium sneakers, slides, and heels.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cart section -->
         <section class="cart__container hidden">
             <div class="cart__header py-8 flex justify-between relative">
                 <h3 class="cart__title text-2xl">Your Cart</h3>
@@ -200,6 +243,7 @@
                 <button class="checkout__btn hidden transition">Proceed to Checkout</button>
             </div>
 
+            <!-- wishlist Container -->
             <div class="wishlist__section">
                 <div class="wish__header relative">
                     <h3 class="wishlist__header text-left text-2xl">Your Wishlist</h3>
@@ -209,13 +253,14 @@
             </div>
         </section>
 
+        <!-- Discount section -->
         <section class="discounted__clothing px-4 max-w-[48rem] m-auto">
 
             <h2 class="discount__header text-2xl text-center font-bold my-6 md:text-3xl md:my-12">DISCOUNT ON DENIM</h2>
 
             <div class="flex flex-col justify-center items-center gap-8 md:flex-row">
                 <div class="sample__model flex-1 m-auto w-full max-w-xs">
-                    <img src="./images/jean-model.jpg" alt="discount products hero" class="w-full">
+                    <img loading="lazy" decoding="async" src="./images/jean-model.jpg" alt="discount products hero" class="w-full">
                 </div>
 
                 <div class="discount__products m-auto flex-1 max-w-sm grid grid-cols-[repeat(auto-fit,minmax(11rem,1fr))] gap-y-8 gap-x-2 sm:gap-4">
