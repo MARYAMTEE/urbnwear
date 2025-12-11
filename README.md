@@ -18,8 +18,7 @@ Live Demo: https://github.com/MARYAMTEE/urbnwear
 │── checkout.html # Checkout page UI
 │── /css
 │   ├── output.css # TailwindCSS
-    ├── style.css  # Main stylesheet for the homepage 
-    └── product.css # Product page styling
+    └── style.css # Main stylesheet for the homepage
 │── /js
 │   ├── main.js # General interactivity
     ├──product.js # product page logic
@@ -143,3 +142,73 @@ Contributions, issues, and suggestions are welcome!
 ## **For support or customizations:**
 Email: ayorindemaryam078@gmail.com
 GitHub: https://github.com/MARYAMTEE
+
+### **🔧 Tailwind Setup & Build Instructions
+
+This project uses Tailwind CSS compiled through the official Tailwind CLI.
+
+📁 Tailwind Configuration
+
+All breakpoints are stored in:
+
+# **tailwind.config.js
+
+All custom colors are stored in:
+# **style.css
+
+Fonts are stored in the html head:
+# Fonts
+
+You can edit this file to:
+
+Add custom colors
+Add fonts
+Extend spacing
+Configure screens
+Enable plugins
+
+### **⚙️ TailwindCSS Build Instructions
+
+If you want to edit Tailwind classes or customize the config, follow these steps:
+
+1. Install Tailwind CLI (if not installed)
+
+# **npm install -D tailwindcss
+
+
+2. Tailwind Config (optional customization file)
+Create it only if you want custom colors, fonts, spacing, etc.
+
+## **npx tailwindcss init
+
+
+This will generate:
+
+## **tailwind.config.js
+
+
+3. Build Tailwind CSS
+Generate output.css from your style.css using:
+
+### **npx @tailwindcss/cli -i ./css/style.css -o ./css/output.css --watch
+
+
+-i → input file
+
+-o → output file
+
+--watch → rebuild automatically when editing
+
+
+### **Mobile Breakpoints Summary
+
+Here is a simple Tailwind breakpoint summary for users customizing the template:
+
+| Breakpoint           | Prefix        | Width       |
+| -------------------- | ------------- | ----------- |
+| **Mobile (default)** | *(no prefix)* | 0px → 639px |
+| **Tablet**           | `sm:`         | ≥ 640px     |
+| **Medium Devices**   | `md:`         | ≥ 768px     |
+| **Large Devices**    | `lg:`         | ≥ 1024px    |
+| **Extra Large**      | `xl:`         | ≥ 1280px    |
+| **2XL**              | `2xl:`        | ≥ 1536px    |
