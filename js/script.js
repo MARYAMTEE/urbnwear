@@ -445,14 +445,16 @@ if (viewMoreBtn) {
 
 
 const trendyFilter = document.getElementById("trendy__filter");
-trendyFilter.addEventListener("change", () => {
-    visibleCount = 4;
-    isExpanded = false;
-    viewMoreBtn.textContent = "View More";
-
-    const currentFilter = trendyFilter.value;
-    displayTrendies(currentFilter);
-});
+if(trendyFilter) {
+    trendyFilter.addEventListener("change", () => {
+        visibleCount = 4;
+        isExpanded = false;
+        viewMoreBtn.textContent = "View More";
+    
+        const currentFilter = trendyFilter.value;
+        displayTrendies(currentFilter);
+    });
+}
 
 // Scrool animation
 function smoothScroll(target, duration = 1200) {

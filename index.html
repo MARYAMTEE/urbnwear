@@ -52,7 +52,6 @@
                 <li class="nav__item active"><a href="#home" class="nav__link active">Home</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                 <li class="nav__item"><a href="#trendy" class="nav__link">Collection</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Journal</a></li>
                 <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
             </ul>
 
@@ -82,11 +81,13 @@
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         </li>
+
                         <li class="social__list transform transition duration-300 hover:-translate-y-1">
                             <a href="#" class="social__links text-[1.3rem] md:text-[1rem]">
                                 <i class="fa-brands fa-pinterest"></i>
                             </a>
                         </li>
+
                         <li class="social__list transform transition duration-300 hover:-translate-y-1">
                             <a href="#" class="social__links text-[1.3rem] md:text-[1rem]">
                                 <i class="fa-brands fa-instagram"></i>
@@ -169,9 +170,9 @@
 
         <!-- Tab section -->
         <section class="clothing__shop mt-16 pb-8" id="products">
-            <div class="shop__products px-4"> 
+            <div class="shop__products px-8"> 
                 <!-- Tabs -->
-                <div class="tabs flex items-center justify-between px-2 bg-[var(--light-antique)] md:justify-center md:gap-10">
+                <div class="tabs flex items-center justify-between px-2 bg-[var(--light-antique)] md:px-8 md:justify-center md:gap-10">
                     <button type="button" class="tab__btn active py-4" data-type="featured">Featured</button>
                     <button type="button" class="tab__btn py-4" data-type="new arrival">New Arrivals</button>
                     <button type="button" class="tab__btn py-4" data-type="best seller">Best Sellers</button>
@@ -185,63 +186,58 @@
         </section>
 
         <!-- About page section -->
-        <section class="container mx-auto px-4 py-8 max-w-[48rem]" id="about">
-            <h2 class="about__header text-center text-2xl font-bold my-6 md:my-0 md:text-3xl md:mb-12 uppercase">About</h2>
+        <section class="mx-auto p-8 max-w-[48rem]" id="about">
+            <h2 class="about__header text-center text-2xl font-bold mb-12 md:text-3xl uppercase">What we Offer</h2>
 
             <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:grid-rows-[1fr_1fr]">
 
                 <!-- Clothes (big card) -->
                 <div class="p-6 lg:p-8 bg-[var(--light-antique)] rounded-2xl overflow-hidden flex flex-col gap-6 items-center justify-center h-full md:flex-row md:gap-0 md:col-span-2 md:row-span-2">
 
-                    <div class="flex-1 text-center">
+                    <div class="flex-1 text-center text-[var(--tamarind)]">
                         <i class="fa-solid fa-shirt about__icon about__icon--big"></i>
                     </div>
 
-                    <div class="flex-1 text-center md:text-left">
-                        <h3 class="about__title text-2xl font-bold md:text-3xl md:text-center">New Clothes</h3>
+                    <div class="flex-1 text-center">
+                        <h3 class="about__title text-2xl font-bold md:text-3xl">New Clothes</h3>
 
                         <!-- Divider -->
                         <div class="w-16 h-[2px] bg-gray-400 mx-auto my-4"></div>
 
-                        <p class="text-gray-600 text-sm">
-                            Premium Quality • Summer Essentials
+                        <p class="text-sm">Premium Quality • Summer Essentials
                         </p>
                     </div>
                 </div>
 
                 <!-- Bags -->
                 <div class="flex flex-col gap-6 p-6 bg-[var(--light-antique)] rounded-2xl overflow-hidden">
-                    <div class="text-center">
+                    <div class="text-center text-[var(--tamarind)]">
                         <i class="fa-solid fa-bag-shopping about__icon about__icon--small"></i>
                     </div>
 
-                    <div class="text-center md:text-left">
-                        <h3 class="about__title text-2xl font-semibold md:text-xl md:text-center">New Bags</h3>
+                    <div class="text-center">
+                        <h3 class="about__title text-2xl font-semibold md:text-xl">New Bags</h3>
 
                         <!-- Divider -->
                         <div class="w-12 h-[2px] bg-gray-400 mx-auto my-4"></div>
 
-                        <p class="text-gray-600 text-sm">
-                            Best Quality • Everyday Use
-                        </p>
+                        <p class="text-sm">Best Quality • Everyday Use</p>
                     </div>
                 </div>
 
                 <!-- Shoes -->
                 <div class="flex flex-col gap-6 p-6 bg-[var(--light-antique)] rounded-2xl overflow-hidden">
-                    <div class="text-center">
+                    <div class="text-center text-[var(--tamarind)]">
                         <i class="fa-solid fa-shoe-prints about__icon about__icon--small"></i>
                     </div>
 
-                    <div class="text-center md:text-left">
-                        <h3 class="about__title text-2xl font-semibold md:text-xl md:text-center">New Shoes</h3>
+                    <div class="text-center">
+                        <h3 class="about__title text-2xl font-semibold md:text-xl">New Shoes</h3>
 
                         <!-- Divider -->
                         <div class="w-12 h-[2px] bg-gray-400 mx-auto my-4"></div>
 
-                        <p class="text-gray-600 text-sm">
-                            Premium Comfort • Fresh Arrivals
-                        </p>
+                        <p class="text-sm">Premium Comfort • Fresh Arrivals</p>
                     </div>
                 </div>
 
@@ -285,9 +281,9 @@
         </section>
 
         <!-- Discount section -->
-        <section class="discounted__clothing px-4 py-8 w-full max-w-[48rem] m-auto">
+        <section class="discounted__clothing p-8 w-full max-w-[48rem] m-auto">
 
-            <h2 class="discount__header text-2xl text-center font-bold my-6 md:my-0 md:text-3xl md:mb-12">DISCOUNT ON DENIM</h2>
+            <h2 class="discount__header text-2xl text-center font-bold md:text-3xl mb-12">DISCOUNT ON DENIM</h2>
 
             <div class="flex flex-col justify-center items-center gap-8 md:flex-row">
                 <div class="sample__model flex-1 m-auto w-full max-w-xs">
@@ -302,8 +298,8 @@
 
         <!-- Trending items section -->
         <section class="trendy__clothing p-8 max-w-[48rem] m-auto" id="trendy">
-            <div class="trendy__header flex justify-between items-center md:mb-12"> 
-                <h2 class="trendy__title text-xl font-bold my-6 md:my-0 md:text-3xl uppercase">Trendy Set</h2>
+            <div class="trendy__header flex justify-between items-center mb-12"> 
+                <h2 class="trendy__title text-xl font-bold md:text-3xl uppercase">Trendy Set</h2>
 
                 <select id="trendy__filter" class="trendy__filter border text-sm p-2">
                     <option value="all" class="trendy__option">All</option>
@@ -363,7 +359,7 @@
                     <div class="footer__nav">
                         <nav class="footer__menu">
                             <ul class="footer__list flex flex-col gap-y-2">
-                                <li class="footer__item"><a class="footer__link" href="#">Home</a></li>
+                                <li class="footer__item"><a class="footer__link" href="#home">Home</a></li>
                                 <li class="footer__item"><a class="footer__link" href="#about">About</a></li>
                                 <li class="footer__item"><a class="footer__link" href="#trendy">Collection</a></li>
                                 <li class="footer__item"><a class="footer__link" href="#footer">Contact</a></li>
@@ -374,7 +370,7 @@
             </div>
 
             <div class="grid__three flex-1">
-                <h1 class="footer__header">Contact</h1>
+                <h1 class="footer__header text-xl font-semibold">Contact</h1>
                 <div class="footer__title flex flex-col gap-y-2">
                     <p class="address text-sm w-full max-w-[17rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas</p>
                     <p class="email">urbanwears@gmail.com</p>
