@@ -183,41 +183,45 @@
         </section>
 
         <!-- About page section -->
-        <section class="container mx-auto px-4 py-12">
-            <h2 class="discount__header text-2xl text-center font-bold my-6 md:text-3xl md:my-12 uppercase">About</h2>
+        <section class="container mx-auto px-4 py-12 max-w-[48rem] m-auto">
+            <h2 class="about__header text-center text-2xl text-center font-bold my-6 md:text-3xl md:my-12 uppercase">About</h2>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:grid-rows-[1fr_1fr]">
 
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:grid-rows-2">
+                <!-- Clothes (big card) -->
+                <div class="p-6 lg:p-8 bg-[var(--light-antique)] rounded-2xl overflow-hidden flex flex-col gap-6 items-center justify-center h-full md:flex-row md:gap-0 md:col-span-2 md:row-span-2">
+                    <div class="flex-1 text-center">
+                        <i class="fa-solid fa-shirt about__icon about__icon--big"></i>
+                    </div>
 
-                <!-- Clothes (Large Feature Card) -->
-                <div class="bg-[var(--light-antique)] rounded-2xl overflow-hidden md:col-span-2 md:row-span-2">
-                    <img loading="lazy" decoding="async" src="./images/about-cloth.png" alt="Clothes" class="object-cover object-center w-full h-78">
-                    <div class="p-6 lg:p-8">
-                        <h2 class="text-3xl font-bold mb-3 text-center">Clothes</h2>
+                    <div class="text-center flex-1 md:text-left">
+                        <h3 class="about__title text-2xl font-bold mb-3 md:text-3xl md:text-center">Clothes</h3>
                         <p class="text-gray-600 leading-relaxed">
-                        Explore trendy outfits, premium streetwear, and everyday essentials designed for comfort and style.
+                            Explore trendy outfits, premium streetwear, and everyday essentials designed for comfort and style.
                         </p>
                     </div>
                 </div>
 
                 <!-- Bags -->
-                <div class="bg-[var(--light-antique)] rounded-2xl overflow-hidden">
-                    <img loading="lazy" decoding="async" src="./images/about-bag-2.png" alt="Clothes" class="object-cover object-center w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-center">Bags</h3>
-                        <p class="text-gray-600">
-                        Stylish handbags, backpacks, and crossbody bags to complete your look.
-                        </p>
+                <div class="flex flex-col gap-6 p-6 bg-[var(--light-antique)] rounded-2xl overflow-hidden">
+                    <div class="text-center">
+                        <i class="fa-solid fa-bag-shopping about__icon about__icon--small"></i>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h3 class="about__title text-2xl font-semibold mb-2 md:text-xl md:text-center">Bags</h3>
+                        <p class="text-gray-600">Stylish handbags, backpacks, and crossbody bags to complete your look.</p>
                     </div>
                 </div>
 
                 <!-- Shoes -->
-                <div class="bg-[var(--light-antique)] rounded-2xl overflow-hidden">
-                    <img loading="lazy" decoding="async" src="./images/about-shoe-1.png" alt="Clothes" class="object-cover object-center h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-center">Shoes</h3>
-                        <p class="text-gray-600">
-                        Step out confidently with premium sneakers, slides, and heels.
-                        </p>
+                <div class="flex flex-col gap-6 p-6 bg-[var(--light-antique)] rounded-2xl overflow-hidden">
+                    <div class="text-center">
+                        <i class="fa-solid fa-shoe-prints about__icon about__icon--small"></i>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h3 class="about__title text-2xl font-semibold mb-2 md:text-xl md:text-center">Shoes</h3>
+                        <p class="text-gray-600">Step out confidently with premium sneakers, slides, and heels.</p>
                     </div>
                 </div>
 
@@ -254,7 +258,7 @@
         </section>
 
         <!-- Discount section -->
-        <section class="discounted__clothing px-4 max-w-[48rem] m-auto">
+        <section class="discounted__clothing px-4 w-full max-w-[48rem] m-auto">
 
             <h2 class="discount__header text-2xl text-center font-bold my-6 md:text-3xl md:my-12">DISCOUNT ON DENIM</h2>
 

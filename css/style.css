@@ -37,7 +37,9 @@
     .logo,
     .footer__logo,
     .footer__header,
-    .checkout__title {
+    .checkout__title,
+    .about__title,
+    .about__header {
         font-family: "Cormorant Garamond", serif;
         letter-spacing: 0.05em;
     }
@@ -483,6 +485,15 @@
         color: white;
     }
 
+    /* About section */
+    .about__icon--big {
+        font-size: 3rem;
+    }
+
+    .about__icon--small {
+        font-size: 3rem;
+    }
+
     @media (min-width: 48rem) {
         .nav__menu {
             position: relative;
@@ -532,6 +543,11 @@
             width: 50%;
             top: 8.5rem;
             max-height: calc(100vh-8rem);
+        }
+
+        /* About section */
+        .about__icon--big {
+            font-size: 5rem;
         }
     }
 

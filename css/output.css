@@ -242,9 +242,6 @@
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
-  .row-span-2 {
-    grid-row: span 2 / span 2;
-  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -329,35 +326,11 @@
   .table {
     display: table;
   }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
-  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
-  }
-  .h-12 {
-    height: calc(var(--spacing) * 12);
-  }
-  .h-22 {
-    height: calc(var(--spacing) * 22);
-  }
-  .h-40 {
-    height: calc(var(--spacing) * 40);
-  }
-  .h-56 {
-    height: calc(var(--spacing) * 56);
-  }
-  .h-66 {
-    height: calc(var(--spacing) * 66);
-  }
-  .h-76 {
-    height: calc(var(--spacing) * 76);
-  }
-  .h-78 {
-    height: calc(var(--spacing) * 78);
   }
   .h-full {
     height: 100%;
@@ -424,12 +397,6 @@
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
   .grid-cols-\[repeat\(auto-fit\,minmax\(10rem\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
   }
@@ -438,9 +405,6 @@
   }
   .grid-cols-\[repeat\(auto-fit\,minmax\(15rem\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
-  }
-  .grid-rows-2 {
-    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -570,9 +534,6 @@
   .bg-\[var\(--tamarind\)\] {
     background-color: var(--tamarind);
   }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
-  }
   .bg-red-600 {
     background-color: var(--color-red-600);
   }
@@ -593,12 +554,6 @@
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
-  }
-  .object-cover {
-    object-fit: cover;
-  }
-  .object-center {
-    object-position: center;
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -963,9 +918,9 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .md\:grid-rows-2 {
+  .md\:grid-rows-\[1fr_1fr\] {
     @media (width >= 48rem) {
-      grid-template-rows: repeat(2, minmax(0, 1fr));
+      grid-template-rows: 1fr 1fr;
     }
   }
   .md\:flex-row {
@@ -986,6 +941,11 @@
   .md\:justify-center {
     @media (width >= 48rem) {
       justify-content: center;
+    }
+  }
+  .md\:gap-0 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 0);
     }
   }
   .md\:gap-2 {
@@ -1038,6 +998,11 @@
       padding-bottom: calc(var(--spacing) * 4);
     }
   }
+  .md\:text-center {
+    @media (width >= 48rem) {
+      text-align: center;
+    }
+  }
   .md\:text-left {
     @media (width >= 48rem) {
       text-align: left;
@@ -1061,6 +1026,12 @@
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
+  .md\:text-xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
   .md\:text-\[1rem\] {
     @media (width >= 48rem) {
       font-size: 1rem;
@@ -1072,24 +1043,9 @@
       line-height: calc(var(--spacing) * 12);
     }
   }
-  .lg\:col-span-2 {
-    @media (width >= 64rem) {
-      grid-column: span 2 / span 2;
-    }
-  }
-  .lg\:row-span-2 {
-    @media (width >= 64rem) {
-      grid-row: span 2 / span 2;
-    }
-  }
   .lg\:mb-24 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 24);
-    }
-  }
-  .lg\:h-72 {
-    @media (width >= 64rem) {
-      height: calc(var(--spacing) * 72);
     }
   }
   .lg\:min-h-\[45rem\] {
@@ -1105,11 +1061,6 @@
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-  .lg\:grid-rows-2 {
-    @media (width >= 64rem) {
-      grid-template-rows: repeat(2, minmax(0, 1fr));
     }
   }
   .lg\:p-8 {
@@ -1151,7 +1102,7 @@
     font-size: 1.1rem;
     position: relative;
   }
-  .logo, .footer__logo, .footer__header, .checkout__title {
+  .logo, .footer__logo, .footer__header, .checkout__title, .about__title, .about__header {
     font-family: "Cormorant Garamond", serif;
     letter-spacing: 0.05em;
   }
@@ -1509,6 +1460,12 @@
   .footer__link {
     color: white;
   }
+  .about__icon--big {
+    font-size: 3rem;
+  }
+  .about__icon--small {
+    font-size: 3rem;
+  }
   @media (min-width: 48rem) {
     .nav__menu {
       position: relative;
@@ -1551,6 +1508,9 @@
       width: 50%;
       top: 8.5rem;
       max-height: calc(100vh-8rem);
+    }
+    .about__icon--big {
+      font-size: 5rem;
     }
   }
   @media (min-width: 64rem) {
