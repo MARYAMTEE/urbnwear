@@ -399,7 +399,7 @@ function displayTrendies(type = "all") {
     
 
     trendyContainer.innerHTML = filtered.map((product, index) => `
-        <div class="trendy__set border border-gray-300 rounded-md text-center ${index >= visibleCount ? 'hidden-set' : ''}">
+        <div class="trendy__set border border-[var(--copper)] rounded-md text-center ${index >= visibleCount ? 'hidden-set' : ''}">
             <img loading="lazy" decoding="async" class="trendy__img" src="${product.image}" alt="${product.name}">
 
             <div class="product__text py-8">
